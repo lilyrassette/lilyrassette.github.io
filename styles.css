@@ -3,14 +3,14 @@ body {
     margin: 0; /* Remove default body margin */
     font-family: 'Arial', sans-serif; /* A clear, common font */
     line-height: 1.6; /* Improve readability */
-    color: #333; /* Dark gray text color */
-    background-color: #f4f4f4; /* Light gray background for the page */
+    color: #756c52; 
+    background-color: #ccc09f; 
 }
 
 /* --- Header & Navigation Bar Styling --- */
 
 header {
-    background-color: #333; /* Dark background for the whole header */
+    background-color: #756c52; /* Dark background for the whole header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     position: sticky; /* Makes header stick to top when scrolling */
     top: 0; /* Sticks it to the very top */
