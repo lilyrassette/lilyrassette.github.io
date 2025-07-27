@@ -28,7 +28,7 @@ header {
 
 /* --- Logo Styling --- */
 .navbar .logo a {
-    color: #fff; /* White color for the logo text */
+    color: #756c52; /* White color for the logo text */
     text-decoration: none; /* Remove underline from the logo link */
     font-size: 1.8rem; /* Larger font size for prominence */
     font-weight: bold; /* Make the logo text bold */
@@ -44,12 +44,8 @@ header {
     gap: 25px; /* Space between each navigation item */
 }
 
-.nav-links li {
-    /* No specific styling needed for the list item itself here */
-}
-
 .nav-links a {
-    color: #fff; /* White color for the navigation links */
+    color: #756c52; /* White color for the navigation links */
     text-decoration: none; /* Remove underline from links */
     padding: 0.5rem 1rem; /* Padding around each link for clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
@@ -58,9 +54,8 @@ header {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #555; /* Darker gray background on hover/focus */
-    color: #fff; /* Keep text white on hover/focus */
-    /* You could also change the color here if you prefer: color: #00bcd4; (a light blue) */
+    background-color: #474232; /* Darker gray background on hover/focus */
+    color: #756c52; /* Keep text white on hover/focus */
 }
 
 /* --- Main Content Area (Basic Styling) --- */
@@ -69,7 +64,7 @@ main {
     max-width: 1200px; /* Match header width for consistency */
     margin: 20px auto; /* Center content and add space below header */
     padding: 20px;
-    background-color: #fff; /* White background for content sections */
+    background-color: #756c52; /* White background for content sections */
     border-radius: 8px; /* Slightly rounded corners for content boxes */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for content boxes */
     min-height: 80vh; /* Ensure content area takes up most of the viewport */
