@@ -3,14 +3,14 @@ body {
     margin: 0; /* Remove default body margin */
     font-family: 'Arial', sans-serif; /* A clear, common font */
     line-height: 1.6; /* Improve readability */
-    color: #756c52; 
+    color: #b5ab8f; 
     background-color: #ccc09f; 
 }
 
 /* --- Header & Navigation Bar Styling --- */
 
 header {
-    background-color: #756c52; /* Dark background for the whole header */
+    background-color: #b5ab8f; /* Dark background for the whole header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     position: sticky; /* Makes header stick to top when scrolling */
     top: 0; /* Sticks it to the very top */
@@ -28,7 +28,7 @@ header {
 
 /* --- Logo Styling --- */
 .navbar .logo a {
-    color: #756c52; /* White color for the logo text */
+    color: #ccc09f; /* White color for the logo text */
     text-decoration: none; /* Remove underline from the logo link */
     font-size: 1.8rem; /* Larger font size for prominence */
     font-weight: bold; /* Make the logo text bold */
@@ -45,7 +45,7 @@ header {
 }
 
 .nav-links a {
-    color: #756c52; /* White color for the navigation links */
+    color: #ccc09f; /* White color for the navigation links */
     text-decoration: none; /* Remove underline from links */
     padding: 0.5rem 1rem; /* Padding around each link for clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
@@ -64,7 +64,7 @@ main {
     max-width: 1200px; /* Match header width for consistency */
     margin: 20px auto; /* Center content and add space below header */
     padding: 20px;
-    background-color: #756c52; /* White background for content sections */
+    background-color: #ccc09f; /* White background for content sections */
     border-radius: 8px; /* Slightly rounded corners for content boxes */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for content boxes */
     min-height: 80vh; /* Ensure content area takes up most of the viewport */
