@@ -3,14 +3,14 @@ body {
     margin: 0; 
     font-family: 'Arial', sans-serif; /* OVERALL FONT */
     line-height: 1.6; /* FONT SIZE */
-    color: #6a1d2f; /* OVERALL TEXT COLOR */
-    background-color: #dea450; /* OVERALL BACKGROUND COLOR */
+    color: #1d3557; /* OVERALL TEXT COLOR */
+    background-color: #457b9d; /* OVERALL BACKGROUND COLOR */
 }
 
 /* --- Header & Navigation Bar Styling --- */
 
 header {
-    background-color: #9b461f; /* HEADER COLOR */
+    background-color: #457b9d; /* HEADER COLOR */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* HEADER SHADOW */
     position: sticky; /* Makes header stick to top when scrolling */
     top: 0; /* Sticks it to the very top */
@@ -28,7 +28,7 @@ header {
 
 /* --- Logo Styling --- */
 .navbar .logo a {
-    color: #42354c; /* LOGO TEXT COLOR */
+    color: #1d3557; /* LOGO TEXT COLOR */
     text-decoration: none; /* Remove underline from the logo link */
     font-size: 1.8rem; /* Larger font size for prominence */
     font-weight: bold; /* Make the logo text bold */
@@ -45,7 +45,7 @@ header {
 }
 
 .nav-links a {
-    color: #354c3c; /* NAV LINK COLORS */
+    color: #1d3557; /* NAV LINK COLORS */
     text-decoration: none; /* Remove underline from links */
     padding: 0.5rem 1rem; /* Padding around each link for clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
@@ -54,8 +54,8 @@ header {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #6a1d2f; /* Darker gray background on hover/focus */
-    color: #354c3c; /* Keep text white on hover/focus */
+    background-color: #a8dadc; /* Darker gray background on hover/focus */
+    color: #1d3557; /* Keep text white on hover/focus */
 }
 
 /* --- Main Content Area (Basic Styling) --- */
@@ -64,7 +64,7 @@ main {
     max-width: 1200px; /* Match header width for consistency */
     margin: 20px auto; /* Center content and add space below header */
     padding: 20px;
-    background-color: #9b461f; /* White background for content sections */
+    background-color: #457b9d; /* White background for content sections */
     border-radius: 8px; /* Slightly rounded corners for content boxes */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for content boxes */
     min-height: 80vh; /* Ensure content area takes up most of the viewport */
@@ -75,7 +75,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    background-color: #9b461f;
+    background-color: #457b9d;
     color: white;
     font-size: 0.9rem;
 }
