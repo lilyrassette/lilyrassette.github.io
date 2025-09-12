@@ -3,14 +3,14 @@ body {
     margin: 0; 
     font-family: 'Arial', sans-serif; /* OVERALL FONT */
     line-height: 1.6; /* FONT SIZE */
-    color: #1d3557; /* OVERALL TEXT COLOR */
-    background-color: #457b9d; /* OVERALL BACKGROUND COLOR */
+    color: #280003; /* OVERALL TEXT COLOR */
+    background-color: #F1E3D3; /* OVERALL BACKGROUND COLOR */
 }
 
 /* --- Header & Navigation Bar Styling --- */
 
 header {
-    background-color: #457b9d; /* HEADER COLOR */
+    background-color: #99C1B9; /* HEADER COLOR */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* HEADER SHADOW */
     position: sticky; /* Makes header stick to top when scrolling */
     top: 0; /* Sticks it to the very top */
@@ -28,7 +28,7 @@ header {
 
 /* --- Logo Styling --- */
 .navbar .logo a {
-    color: #1d3557; /* LOGO TEXT COLOR */
+    color: #280003; /* LOGO TEXT COLOR */
     text-decoration: none; /* Remove underline from the logo link */
     font-size: 1.8rem; /* Larger font size for prominence */
     font-weight: bold; /* Make the logo text bold */
@@ -45,7 +45,7 @@ header {
 }
 
 .nav-links a {
-    color: #1d3557; /* NAV LINK COLORS */
+    color: #280003; /* NAV LINK COLORS */
     text-decoration: none; /* Remove underline from links */
     padding: 0.5rem 1rem; /* Padding around each link for clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
