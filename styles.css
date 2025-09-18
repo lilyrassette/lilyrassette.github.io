@@ -7,26 +7,23 @@ body {
     background-color: #F1E3D3;                                    /* OVERALL BACKGROUND COLOR */
 }
 
-/* --- Header & Navigation Bar Styling --- */
+/* HEADER/NAV-BAR*/
 
 header {
     background-color: #99C1B9;                                    /* HEADER COLOR */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);                     /* HEADER SHADOW */
-    position: sticky; /* Makes header stick to top when scrolling */
-    top: 0; /* Sticks it to the very top */
+    position: sticky; top: 0; 
     z-index: 1000; /* Ensures it stays on top of other content */
 }
 
 .navbar {
-    max-width: 1200px; /* Limit content width for better readability on large screens */
-    margin: 0 auto; /* Center the navbar within the header */
-    padding: 1rem 2rem; /* Vertical and horizontal padding */
+    max-width: 1200px;
+    margin: 0 auto; padding: 1rem 2rem; 
     display: flex; /* Use Flexbox for alignment of logo and links */
     justify-content: space-between; /* Pushes logo to left, links to right */
     align-items: center; /* Vertically centers items in the middle */
 }
 
-/* --- Logo Styling --- */
+/* LOGO */
 .navbar .logo a {
     color: #F1E3D3;                                              /* LOGO TEXT COLOR */
     text-decoration: none; /* Remove underline from the logo link */
@@ -35,7 +32,7 @@ header {
     letter-spacing: 0.5px; /* Slightly space out letters */
 }
 
-/* --- Navigation Links (UL/LI) Styling --- */
+/* NAV LINKS */
 .nav-links {
     list-style: none; /* Remove default bullet points from the list */
     margin: 0; /* Remove default margin */
@@ -58,8 +55,7 @@ header {
     color: #1d3557; /* Keep text white on hover/focus */
 }
 
-/* --- Main Content Area (Basic Styling) --- */
-/* Add some basic styling for your main content to see it below the header */
+/* MAIN CONTENT */
 main {
     max-width: 1200px; /* Match header width for consistency */
     margin: 20px auto; /* Center content and add space below header */
