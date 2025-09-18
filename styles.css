@@ -62,14 +62,15 @@ main {
 
 /* ABOUT ME SECTION */
 .about-me-section {
-    display: flex;align-items: center;gap: 40px;
+    display: flex;align-items: center;gap: 40px;    width: 80%; /* Adjust this percentage as needed for your layout */
+    margin: 0 auto;
 }
 
 .about-me-photo {
-   width: 200px; /* Make the image 200 pixels wide */
-  height: 200px; /* Make the image 200 pixels tall */
-  border-radius: 50%; /* This makes it a circle */
-  object-fit: cover; /* This makes sure the image fills the circle without stretching */
+    width: 200px; /* Make the image 200 pixels wide */
+    height: 200px; /* Make the image 200 pixels tall */
+    border-radius: 50%; /* This makes it a circle */
+    object-fit: cover; /* This makes sure the image fills the circle without stretching */
 }
 
 .about-me-text {
