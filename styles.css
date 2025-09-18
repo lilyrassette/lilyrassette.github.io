@@ -80,7 +80,7 @@ main {
 .work-experience-section {
     max-width: 80%;
     margin: 40px auto;
-    text-align: center; /* Center the heading and logo group */
+    text-align: left; /* Center the heading and logo group */
 
     padding: 30px; 
     background-color: #457b9d; /* A soft, earthy tone from your main section */
