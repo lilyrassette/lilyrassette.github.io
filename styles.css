@@ -69,7 +69,6 @@ main {
 .about-me-photo {
     width: 200px; /* Make the image 200 pixels wide */
     height: 200px; /* Make the image 200 pixels tall */
-    border-radius: 50%; /* This makes it a circle */
     object-fit: cover; /* This makes sure the image fills the circle without stretching */
 }
 
