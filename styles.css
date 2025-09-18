@@ -69,7 +69,7 @@ main {
 .about-me-photo {
     width: 200px; /* Make the image 200 pixels wide */
     height: 200px; /* Make the image 200 pixels tall */
-    object-fit: cover; /* This makes sure the image fills the circle without stretching */
+    object-fit: cover;
 }
 
 .about-me-text {
