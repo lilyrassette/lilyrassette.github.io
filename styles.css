@@ -59,7 +59,7 @@ main {
 
 /* ABOUT ME SECTION */
 .about-me-section {
-    display: flex;align-items: center;gap: 40px;    width: 80%; /* Adjust this percentage as needed for your layout */
+    display: flex;align-items: center; gap: 40px;    width: 80%; /* Adjust this percentage as needed for your layout */
     margin: 0 auto;
 }
 
@@ -76,16 +76,15 @@ main {
 /* WORK EXPERIENCE SECTION */
 .work-experience-section {
     max-width: 100%;
-    /*margin: 40px auto;*/
+    margin: 40px auto;
     text-align: left; /* Center the heading and logo group */
-
-    padding: 30px; 
+    /* padding: 30px; added space around the edges of the work experience section */ 
     background-color: #457b9d; /* A soft, earthy tone from your main section */
 }
 
 .work-experience-section h2 {
     margin-bottom: 30px;
-    color: #333;
+    color: #F1E3D3;
 }
 
 .company-list {
