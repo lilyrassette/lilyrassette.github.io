@@ -10,7 +10,7 @@ body {
 /* HEADER/NAV-BAR*/
 
 header {
-    background-color: #99C1B9;                                    /* HEADER COLOR */
+    background-color: #283D3B;                                    /* HEADER COLOR */
     position: sticky; top: 0; 
     z-index: 1000; /* Ensures it stays on top of other content */
 }
@@ -25,7 +25,7 @@ header {
 
 /* LOGO */
 .navbar .logo a {
-    color: #F1E3D3;                                              /* LOGO TEXT COLOR */
+    color: #99C1B9;                                              /* LOGO TEXT COLOR */
     text-decoration: none; /* Remove underline from the logo link */
     font-size: 1.8rem; /* Larger font size for prominence */
     font-weight: bold; /* Make the logo text bold */
@@ -34,15 +34,11 @@ header {
 
 /* NAV LINKS */
 .nav-links {
-    list-style: none; /* Remove default bullet points from the list */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Arrange list items horizontally */
-    gap: 25px; /* Space between each navigation item */
+    list-style: none;margin: 0;padding: 0; display: flex; gap: 25px;
 }
 
 .nav-links a {
-    color: #F1E3D3;                                             /* NAV LINK COLORS */
+    color: #99C1B9;                                             /* NAV LINK COLORS */
     text-decoration: none; /* Remove underline from links */
     padding: 0.5rem 1rem; /* Padding around each link for clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
@@ -66,7 +62,7 @@ main {
     min-height: 80vh; /* Ensure content area takes up most of the viewport */
 }
 
-/* --- Footer Styling (Basic) --- */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -76,7 +72,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- Responsive Design (Optional, but highly recommended) --- */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack logo and nav links vertically on small screens */
