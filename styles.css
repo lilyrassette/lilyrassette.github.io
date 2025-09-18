@@ -47,26 +47,35 @@ header {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #a8dadc;                                 /* HOVER COLOR*/
+    background-color: #F1E3D3;                                 /* HOVER COLOR*/
     color: #1d3557; /* Keep text white on hover/focus */
 }
 
 /* MAIN CONTENT */
 main {
-    max-width: 1200px; /* Match header width for consistency */
-    margin: 20px auto; /* Center content and add space below header */
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #F1E3D3;                                 /* CONTENT SECTION BACKGROUND COLOR */
-    border-radius: 8px; /* Slightly rounded corners for content boxes */
-    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for content boxes */
-    min-height: 80vh; /* Ensure content area takes up most of the viewport */
+    background-color: #F1E3D3;
+    min-height: 80vh;
+}
+
+/* ABOUT ME SECTION */
+.about-me-section {
+    display: flex;align-items: center;gap: 40px;
+}
+
+.about-me-photo {
+    width: 250px; height: 250px; border-radius: 50%; object-fit: cover; flex-shrink: 0; 
+}
+
+.about-me-text {
+    flex-grow: 1; 
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    text-align: center;padding: 20px;margin-top: 40px;
     background-color: #457b9d;                                   /* FOOTER COLOR */
     color: white;
     font-size: 0.9rem;
