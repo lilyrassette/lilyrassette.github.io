@@ -25,7 +25,7 @@ header {
 
 /* LOGO */
 .navbar .logo a {
-    color: #99C1B9;                                              /* LOGO TEXT COLOR */
+    color: #457b9d;                                              /* LOGO TEXT COLOR */
     text-decoration: none; /* Remove underline from the logo link */
     font-size: 1.8rem; /* Larger font size for prominence */
     font-weight: bold; /* Make the logo text bold */
@@ -38,7 +38,7 @@ header {
 }
 
 .nav-links a {
-    color: #99C1B9;                                             /* NAV LINK COLORS */
+    color: #457b9d;                                             /* NAV LINK COLORS */
     text-decoration: none; /* Remove underline from links */
     padding: 0.5rem 1rem; /* Padding around each link for clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
@@ -81,7 +81,10 @@ main {
     max-width: 80%;
     margin: 40px auto;
     text-align: center; /* Center the heading and logo group */
-    padding: 20px;
+
+    padding: 30px; 
+    background-color: #457b9d; /* A soft, earthy tone from your main section */
+    border-radius: 8px; /* Optional: adds slightly rounded corners */
 }
 
 .work-experience-section h2 {
