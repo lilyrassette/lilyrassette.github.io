@@ -40,6 +40,7 @@ header {
 .nav-links a {
     color: #457b9d;                                             /* NAV LINK COLORS */
     text-decoration: none; /* Remove underline from links */
+    font-weight: bold;
     padding: 0.5rem 1rem; /* Padding around each link for clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
     border-radius: 5px; /* Slightly rounded corners for hover effect */
