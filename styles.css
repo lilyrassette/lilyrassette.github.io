@@ -125,6 +125,28 @@ main {
     object-fit: contain;
 }
 
+/* -------------------------- CONTACT INFO */
+.contact-info {
+    width: 100%;
+    margin: 40px auto; 
+    padding: 30px; 
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    /* This is what puts your heading and logos on the same line */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.contact-container h2 {
+    margin: 0;
+    color: #1d3557;
+}
+
 /* -------------------------- FOOTER */
 footer {
     text-align: center;padding: 20px;margin-top: 40px;
