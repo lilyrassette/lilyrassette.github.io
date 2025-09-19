@@ -120,8 +120,8 @@ main {
 /* -------------------------- FOOTER */
 footer {
     text-align: center;padding: 20px;margin-top: 40px;
-    background-color: #457b9d;                                   /* FOOTER COLOR */
-    color: white;
+    background-color: #1d3557;                                   /* FOOTER COLOR */
+    color: #457b9d;
     font-size: 0.9rem;
 }
 
