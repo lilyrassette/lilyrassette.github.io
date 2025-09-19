@@ -76,7 +76,7 @@ main {
 /* -------------------------- WORK EXPERIENCE SECTION */
 .work-experience-section {
     max-width: 100%;
-    /*margin: 40px auto;*/
+    margin: 40px auto;
     text-align: left; /* Center the heading and logo group */
 
     padding: 30px; 
