@@ -1,58 +1,54 @@
 
 body {
     margin: 0; 
-    font-family: 'Roboto', sans-serif;                             /* OVERALL FONT */
+    font-family: 'Roboto', sans-serif;                            /* OVERALL FONT */
     line-height: 1.6;                                             /* FONT SIZE */
-    color: #280003;                                               /* OVERALL TEXT COLOR */
-    background-color: #F1E3D3;                                    /* OVERALL BACKGROUND COLOR */
+    color: #280003;                                             /* OVERALL TEXT COLOR */
+    background-color: #F1E3D3;                                  /* OVERALL BACKGROUND COLOR */
 }
 
-/* HEADER/NAV-BAR*/
+/* -------------------------- HEADER/NAV-BAR*/
 
 header {
-    background-color: #1d3557;                                    /* HEADER COLOR */
+    background-color: #1d3557;                                  /* HEADER COLOR */
     position: sticky; top: 0; 
-    z-index: 1000; /* Ensures it stays on top of other content */
+    z-index: 1000;
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto; padding: 1rem 2rem; 
-    display: flex; /* Use Flexbox for alignment of logo and links */
-    justify-content: space-between; /* Pushes logo to left, links to right */
-    align-items: center; /* Vertically centers items in the middle */
+    max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; 
 }
 
-/* LOGO */
+/* -------------------------- LOGO */
 .navbar .logo a {
-    color: #457b9d;                                              /* LOGO TEXT COLOR */
-    text-decoration: none; /* Remove underline from the logo link */
-    font-size: 1.8rem; /* Larger font size for prominence */
-    font-weight: bold; /* Make the logo text bold */
-    letter-spacing: 0.5px; /* Slightly space out letters */
+    color: #457b9d;                                             /* LOGO TEXT COLOR */
+    text-decoration: none; /* remove underline */
+    font-size: 1.8rem; /* larger font size */
+    font-weight: bold; /* bold */
+    letter-spacing: 0.5px; /* letter spacing */
 }
 
-/* NAV LINKS */
+/* -------------------------- NAV LINKS */
 .nav-links {
     list-style: none;margin: 0;padding: 0; display: flex; gap: 25px;
 }
 
 .nav-links a {
     color: #457b9d;                                             /* NAV LINK COLORS */
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold;
-    padding: 0.5rem 1rem; /* Padding around each link for clickable area */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
-    border-radius: 5px; /* Slightly rounded corners for hover effect */
+    text-decoration: none; /*remove underline */
+    padding: 0.5rem 1rem; /* increase clickable area */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold; /*bold*/
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #F1E3D3;                                 /* HOVER COLOR*/
-    color: #1d3557; /* Keep text white on hover/focus */
+    background-color: #F1E3D3;                                  /* HOVER COLOR*/
+    color: #1d3557; 
 }
 
-/* MAIN CONTENT */
+/* -------------------------- MAIN CONTENT */
 main {
     max-width: 1200px;
     margin: 20px auto;
@@ -61,26 +57,26 @@ main {
     min-height: 80vh;
 }
 
-/* ABOUT ME SECTION */
+/* -------------------------- ABOUT ME SECTION */
 .about-me-section {
-    display: flex;align-items: center;gap: 40px;    width: 80%; /* Adjust this percentage as needed for your layout */
+    display: flex;align-items: center; gap: 40px;    width: 80%;  /* Adjust this percentage as needed for your layout */
     margin: 0 auto;
 }
 
 .about-me-photo {
-    width: 200px; /* Make the image 200 pixels wide */
-    height: 200px; /* Make the image 200 pixels tall */
-    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
 .about-me-text {
     flex-grow: 1; 
 }
 
-/* WORK EXPERIENCE SECTION */
+/* -------------------------- WORK EXPERIENCE SECTION */
 .work-experience-section {
     max-width: 100%;
-    margin: 40px auto;
+    /*margin: 40px auto;*/
     text-align: left; /* Center the heading and logo group */
 
     padding: 30px; 
@@ -89,7 +85,7 @@ main {
 
 .work-experience-section h2 {
     margin-bottom: 30px;
-    color: #333;
+    color: #F1E3D3;
 }
 
 .company-list {
@@ -121,7 +117,7 @@ main {
     object-fit: contain; /* Ensures the entire logo is visible without distortion */
 }
 
-/* FOOTER */
+/* -------------------------- FOOTER */
 footer {
     text-align: center;padding: 20px;margin-top: 40px;
     background-color: #457b9d;                                   /* FOOTER COLOR */
@@ -129,7 +125,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* -------------------------- RESPONSIVE */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack logo and nav links vertically on small screens */
