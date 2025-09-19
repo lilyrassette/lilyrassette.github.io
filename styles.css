@@ -75,12 +75,17 @@ main {
 
 /* -------------------------- WORK EXPERIENCE SECTION */
 .work-experience-section {
+    /* These three lines are the key changes for the layout */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    /* Keep the other properties for styling */
     max-width: 100%;
     margin: 40px auto;
-    text-align: left; /* Center the heading and logo group */
-
-    padding: 30px; 
-    background-color: #457b9d; /* A soft, earthy tone from your main section */
+    text-align: left; /* Keep this to align the heading to the left within its own flex item */
+    padding: 30px;
+    background-color: #457b9d;
 }
 
 .work-experience-section h2 {
