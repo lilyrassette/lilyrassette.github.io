@@ -81,46 +81,48 @@ main {
     background-color: #457b9d;
 }
 
-.work-experience-section h2 {
-    margin-bottom: 30px;
-    padding-left: 20px;
-    color: #F1E3D3;
-}
-
+/* -------------------------- INNER CONTAINER */
 .work-experience-container {
     max-width: 1200px;
     margin: 0 auto;
+    
+    /* This is what puts your heading and logos on the same line */
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
+/* -------------------------- CONTENT STYLING */
+.work-experience-container h2 {
+    margin: 0;
+    color: #F1E3D3;
+}
+
 .company-list {
     display: flex;
-    flex-wrap: wrap; /* Allows logos to wrap to the next line on small screens */
-    justify-content: center; /* Centers the logos horizontally */
-    gap: 30px; /* Provides consistent space between each logo */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .company-logo-link {
-    display: block; /* Ensures the link takes up the full size of its container */
-    width: 120px; /* Give each logo a fixed size */
+    display: block;
+    width: 120px;
     height: 120px;
     padding: 10px;
-   /*  background-color: #ffffff; /* Add a white background for contrast */
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
-    transition: transform 0.2s, box-shadow 0.2s; /* Add a hover effect */
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .company-logo-link:hover {
-    transform: scale(1.05); /* Makes the logo slightly bigger on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .company-logo {
-    width: 100%; /* Makes the image fill its container */
+    width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the entire logo is visible without distortion */
+    object-fit: contain;
 }
 
 /* -------------------------- FOOTER */
