@@ -100,7 +100,7 @@ main {
     width: 120px; /* Give each logo a fixed size */
     height: 120px;
     padding: 10px;
-    background-color: #ffffff; /* Add a white background for contrast */
+   /*  background-color: #ffffff; /* Add a white background for contrast */
     border: 1px solid #ddd;
     border-radius: 8px; /* Slightly rounded corners for a modern look */
     transition: transform 0.2s, box-shadow 0.2s; /* Add a hover effect */
