@@ -164,7 +164,6 @@ footer {
 
  
     .work-experience-container {
-        flex-direction: column; /* This stacks the text and logos vertically */
         align-items: flex-start; /* Aligns them all to the left */
         gap: 20px; /* Adjusts the space between stacked elements */
     }
