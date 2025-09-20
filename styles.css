@@ -176,7 +176,7 @@ footer {
     .company-list {
         justify-content: flex-start; /* Aligns the logos to the left */
     }
-}
+
 
     .navbar {
         flex-direction: column; /* Stack logo and nav links vertically on small screens */
