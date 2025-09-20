@@ -164,15 +164,19 @@ footer {
 
  
     .work-experience-container {
-        flex-direction: column; /* Stacks the text and logos vertically */
-        align-items: flex-start; /* Aligns them to the left */
-        gap: 20px; /* Reduces the gap for smaller screens */
+        flex-direction: column; /* This stacks the text and logos vertically */
+        align-items: flex-start; /* Aligns them all to the left */
+        gap: 20px; /* Adjusts the space between stacked elements */
     }
 
     .work-experience-text {
-        flex-direction: column;
-        width: 100%; /* Makes the text block take up the full width */
+        width: 100%; /* Forces the text to take up the full available width */
     }
+
+    .company-list {
+        justify-content: flex-start; /* Aligns the logos to the left */
+    }
+}
 
     .navbar {
         flex-direction: column; /* Stack logo and nav links vertically on small screens */
