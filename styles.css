@@ -160,6 +160,19 @@ footer {
 
 /* -------------------------- RESPONSIVE */
 @media (max-width: 768px) {
+
+ 
+    .work-experience-container {
+        flex-direction: column; /* Stacks the text and logos vertically */
+        align-items: flex-start; /* Aligns them to the left */
+        gap: 20px; /* Reduces the gap for smaller screens */
+    }
+
+    .work-experience-text {
+        flex-direction: column;
+        width: 100%; /* Makes the text block take up the full width */
+    }
+
     .navbar {
         flex-direction: column; /* Stack logo and nav links vertically on small screens */
         align-items: flex-start; /* Align items to the start when stacked */
