@@ -95,6 +95,7 @@ main {
 .work-experience-text {
     flex-direction: column; /* This makes the heading and text stack */
     gap: 15px; /* Adds a bit of space between the heading and the text */
+    color:#F1E3D3;
 }
 
 .work-experience-text h2 {
