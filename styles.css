@@ -59,7 +59,7 @@ main {
 
 /* -------------------------- ABOUT ME SECTION */
 .about-me-section {
-    display: flex;align-items: center; /*gap: 40px;    width: 80%;  /* Adjust this percentage as needed for your layout */
+    display: flex;align-items: center; width: 95%; /*gap: 40px;    width: 80%;  /* Adjust this percentage as needed for your layout */
     margin: 0 auto;
 }
 
