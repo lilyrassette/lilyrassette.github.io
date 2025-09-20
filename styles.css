@@ -86,15 +86,18 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     
-    /* This is what puts your heading and logos on the same line */
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-/* -------------------------- CONTENT STYLING */
-.work-experience-container h2 {
-    margin: 0;
+/* -------------------------- TEXT BLOCK */
+.work-experience-text {
+    flex-direction: column; /* This makes the heading and text stack */
+    gap: 15px; /* Adds a bit of space between the heading and the text */
+}
+
+.work-experience-text h2 {
     color: #F1E3D3;
 }
 
