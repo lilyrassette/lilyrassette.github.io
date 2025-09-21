@@ -80,6 +80,7 @@ main {
     height: 300px;
     object-fit: contain;
     border-radius: 8px;
+    margin-left: 40px;
 }
 
 /* -------------------------- WORK EXPERIENCE SECTION --------------------------*/
