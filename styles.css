@@ -1,70 +1,78 @@
-
 body {
-    margin: 0; 
-    font-family: 'Roboto', sans-serif;                            /* OVERALL FONT */
-    line-height: 1.6;                                             /* FONT SIZE */
-    color: #1d3557;                                             /* OVERALL TEXT COLOR */
-    background-color: #F1E3D3;                                  /* OVERALL BACKGROUND COLOR */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #1d3557;
+    background-color: #F1E3D3;
 }
 
-/* -------------------------- HEADER/NAV-BAR*/
-
+/* -------------------------- HEADER/NAV-BAR --------------------------*/
 header {
-    background-color: #1d3557;                                  /* HEADER COLOR */
-    position: sticky; top: 0; 
+    background-color: #1d3557;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
 .navbar {
-    max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* -------------------------- LOGO */
 .navbar .logo a {
-    color: #457b9d;                                             /* LOGO TEXT COLOR */
-    text-decoration: none; /* remove underline */
-    font-size: 1.8rem; /* larger font size */
-    font-weight: bold; /* bold */
-    letter-spacing: 0.5px; /* letter spacing */
+    color: #457b9d;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
-/* -------------------------- NAV LINKS */
 .nav-links {
-    list-style: none;margin: 0;padding: 0; display: flex; gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
 }
 
 .nav-links a {
-    color: #457b9d;                                             /* NAV LINK COLORS */
-    text-decoration: none; /*remove underline */
-    padding: 0.5rem 1rem; /* increase clickable area */
+    color: #457b9d;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
-    font-weight: bold; /*bold*/
+    font-weight: bold;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #F1E3D3;                                  /* HOVER COLOR*/
-    color: #1d3557; 
+    background-color: #F1E3D3;
+    color: #1d3557;
 }
 
-/* -------------------------- MAIN CONTENT */
+/* -------------------------- MAIN CONTENT --------------------------*/
 main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #F1E3D3;
-    /* min-height: 80vh; */
 }
 
-/* -------------------------- ABOUT ME SECTION */
+/* -------------------------- ABOUT ME SECTION --------------------------*/
 .about-me-section {
-    display: flex;align-items: center; width: 95%; /*gap: 40px;    width: 80%;  /* Adjust this percentage as needed for your layout */
+    display: flex;
+    align-items: center;
+    width: 95%; /* Adjust this percentage as needed for your layout */
     margin: 0 auto;
+    gap: 40px;
 }
 
 .about-me-text {
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .about-me-photo {
@@ -74,28 +82,27 @@ main {
     border-radius: 8px;
 }
 
-/* -------------------------- WORK EXPERIENCE SECTION */
+/* -------------------------- WORK EXPERIENCE SECTION --------------------------*/
 .work-experience-section {
     width: 100%;
-    margin: 40px auto; 
-    padding: 30px; 
+    margin: 40px auto;
+    padding: 30px;
     background-color: #457b9d;
 }
 
-/* -------------------------- INNER CONTAINER */
 .work-experience-container {
     max-width: 1200px;
-    margin: 0 auto;    
+    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-/* -------------------------- TEXT BLOCK */
 .work-experience-text {
-    flex-direction: column; /* This makes the heading and text stack */
-    gap: 15px; /* Adds a bit of space between the heading and the text */
-    color:#F1E3D3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #F1E3D3;
 }
 
 .work-experience-text h2 {
@@ -120,7 +127,7 @@ main {
 
 .company-logo-link:hover {
     transform: scale(1.05);
-    background-color:#F1E3D3;
+    background-color: #F1E3D3;
 }
 
 .company-logo {
@@ -129,18 +136,16 @@ main {
     object-fit: contain;
 }
 
-/* -------------------------- CONTACT INFO */
+/* -------------------------- CONTACT INFO --------------------------*/
 .contact-info {
     width: 100%;
-    margin: 40px auto; 
-    padding: 30px; 
+    margin: 40px auto;
+    padding: 30px;
 }
 
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
-    
-    /* This is what puts your heading and logos on the same line */
     display: flex;
     align-items: center;
     gap: 40px;
@@ -151,62 +156,62 @@ main {
     color: #1d3557;
 }
 
-/* -------------------------- FOOTER */
+/* -------------------------- FOOTER --------------------------*/
 footer {
-    text-align: center;padding: 20px;margin-top: 40px;
-    background-color: #1d3557;                                   /* FOOTER COLOR */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #1d3557;
     color: #457b9d;
     font-size: 0.9rem;
 }
 
-/* -------------------------- RESPONSIVE */
+/* -------------------------- RESPONSIVE --------------------------*/
 @media (max-width: 768px) {
-
- 
-    .work-experience-container {
-        align-items: flex-start; /* Aligns them all to the left */
-        gap: 20px; /* Adjusts the space between stacked elements */
-    }
-
-    .work-experience-text {
-        width: 100%; /* Forces the text to take up the full available width */
-    }
-
-    .company-list {
-        justify-content: flex-start; /* Aligns the logos to the left */
-    }
-
-
     .navbar {
-        flex-direction: column; /* Stack logo and nav links vertically on small screens */
-        align-items: flex-start; /* Align items to the start when stacked */
-        padding: 1rem; /* Adjust padding for smaller screens */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
     }
 
     .navbar .logo {
-        margin-bottom: 15px; /* Space between logo and stacked links */
+        margin-bottom: 15px;
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Make links take full width */
-        gap: 0; /* Remove gap when stacked */
-    }
-
-    .nav-links li {
-        width: 100%; /* Make each list item take full width */
-        text-align: left; /* Align text to the left */
-        margin-left: 0; /* Remove left margin */
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
     }
 
     .nav-links a {
-        display: block; /* Make links block-level to fill width */
-        padding: 10px 15px; /* Adjust padding for stacked links */
-        border-radius: 0; /* Remove border radius if you don't want it for stacked items */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+        display: block;
+        padding: 10px 15px;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
     }
 
     .nav-links li:last-child a {
-        border-bottom: none; /* No border for the last item */
+        border-bottom: none;
+    }
+
+    .work-experience-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .work-experience-text {
+        width: 100%;
+    }
+
+    .company-list {
+        justify-content: flex-start;
     }
 }
