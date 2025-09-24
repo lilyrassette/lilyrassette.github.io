@@ -102,7 +102,7 @@ main {
 .work-experience-text {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    /* gap: 5px; */
     color: #F1E3D3;
 }
 
@@ -157,7 +157,7 @@ main {
     color: #1d3557;
 }
 
-.contact-list {
+.contact-link {
     display: flex;
     gap: 30px;
     fill: #1d3557; /* Changes the color of the SVG's shapes */
