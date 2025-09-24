@@ -59,8 +59,12 @@ main {
 
 /* -------------------------- ABOUT ME SECTION */
 .lilly-section, .bidc-section, .psr-section, .frc-section {
-    display: flex;align-items: center; gap: 40px;    width: 80%;  /* Adjust this percentage as needed for your layout */
+    display: flex;align-items: center; gap: 40px;    width: 90%;  /* Adjust this percentage as needed for your layout */
     margin: 0 auto;
+}
+
+.bidc-section, .frc-section {
+    background-color: #1d3557;
 }
 
 .cv-text {
