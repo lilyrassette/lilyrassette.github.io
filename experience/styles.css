@@ -73,6 +73,21 @@ main {
     object-fit: contain;
 }
 
+.learn-more-button {
+    text-decoration: none;
+    color: white;
+    background-color: #1d3557;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+    /* These Flexbox properties center the text and arrow vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Ensures the button does not shrink if space is limited */
+    flex-shrink: 0;
+}
 
 
 /* -------------------------- RESPONSIVE */
