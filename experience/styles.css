@@ -59,16 +59,16 @@ main {
 
 /* -------------------------- ABOUT ME SECTION */
 .lilly-section, .bidc-section, .psr-section, .frc-section {
-    display: flex;align-items: center; gap: 40px;    width: 100%;  /* Adjust this percentage as needed for your layout */
-    margin: 0 auto;
-}
-
-.bidc-section, .frc-section {
+    display: flex;
+    align-items: center;    
     width: 100%;
     margin: 40px auto;
     padding: 30px;
-    background-color: #457b9d;
     box-sizing: border-box;
+}
+
+.bidc-section, .frc-section {
+    background-color: #457b9d;
 }
 
 .cv-text {
