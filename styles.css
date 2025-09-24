@@ -83,6 +83,21 @@ main {
     margin-left: 40px;
 }
 
+/* -------------------------- PHOTO BAR --------------------------*/
+
+.photo-bar {
+    display: flex; /* Arranges the images horizontally */
+    width: 100%; /* Ensures the bar stretches across the entire page */
+    margin: 40px 0; /* Creates space above and below the bar */
+    gap: 0; /* Removes all space between the images */
+}
+
+.photo-bar-image {
+    width: 100%; /* Allows the image to fill its parent container */
+    height: 300px; /* Sets a fixed height for a consistent look */
+    object-fit: cover; /* This is key: it crops the images to fit without distortion */
+}
+
 /* -------------------------- WORK EXPERIENCE SECTION --------------------------*/
 .work-experience-section {
     width: 100%;
