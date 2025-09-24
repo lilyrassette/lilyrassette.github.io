@@ -68,6 +68,7 @@ main {
     margin: 40px auto;
     padding: 30px;
     background-color: #457b9d;
+    box-sizing: border-box;
 }
 
 .cv-text {
