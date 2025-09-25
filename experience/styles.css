@@ -66,12 +66,14 @@ main {
     padding: 30px;
     gap: 30px;
     box-sizing: border-box;
+    color:#1d3557
 }
 
 .bidc-section, .frc-section {
     background-color: #457b9d;
     margin: 0;         /* remove default centering */
     border-radius: 0;  /* make it edge-to-edge */
+    color:#F1E3D3
 }
 
 .cv-text {
