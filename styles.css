@@ -251,6 +251,12 @@ main {
     fill: #1d3557;
     width: 100px;
     height: 100px;
+    
+}
+
+.contact-link:hover {
+    transform: scale(1.05);
+    background-color: #F1E3D3;
 }
 
 /* -------------------------- FOOTER --------------------------*/
