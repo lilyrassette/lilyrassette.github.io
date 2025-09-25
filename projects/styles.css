@@ -98,6 +98,11 @@ main {
     font-size: 2rem;
 }
 
+.category-details h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
 .category-details ul {
     list-style-type: none;
     padding: 0;
