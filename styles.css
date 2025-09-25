@@ -108,55 +108,76 @@ main {
 /* -------------------------- PROJECTS SECTION --------------------------*/
 .projects-section {
     width: 100%;
-    background-color: #457b9d; /* The blue background color */
+    background-color: #457b9d;
     margin: 40px 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
 .projects-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex; /* Arranges the projects side-by-side */
-    flex-wrap: wrap; /* Allows projects to wrap to a new row */
-    gap: 0; /* Removes all space between projects */
+    display: flex; /* This creates the two-column layout */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Styles for the text column on the left */
+.projects-text-column {
+    flex-basis: 40%;
+}
+
+.projects-text-column h2 {
+    color: #F1E3D3;
+}
+
+.projects-text-column p {
+    color: #F1E3D3;
+}
+
+/* Styles for the grid of images on the right */
+.projects-grid-column {
+    flex-basis: 60%;
+    display: flex;
+    flex-wrap: wrap; /* This allows the images to form a 2x3 grid */
+    gap: 0;
 }
 
 .project-item {
     display: block;
     position: relative;
     overflow: hidden;
-    height: 300px; /* Sets a fixed height for a consistent bar */
-    flex-basis: calc(100% / 3); /* Sets the width to get 3 items per row */
-    flex-grow: 1; /* Makes each project item fill the available space */
+    height: 250px; /* A fixed height for a consistent grid */
+    flex-basis: calc(100% / 3); /* Sets the width for 3 items per row */
 }
 
 .project-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images are not distorted and fill the space */
-    transition: transform 0.3s ease; /* Adds a smooth zoom effect on hover */
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .project-item:hover img {
-    transform: scale(1.05); /* Zooms in slightly on hover */
+    transform: scale(1.05);
 }
 
-/* -------------------------- HOVER EFFECT --------------------------*/
+/* Hover effect */
 .project-info {
-    position: absolute; /* Positions the info div on top of the image */
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 20px;
-    background-color: rgba(29, 53, 87, 0.8); /* Semi-transparent background */
+    background-color: rgba(29, 53, 87, 0.8);
     color: white;
-    opacity: 0; /* Starts as invisible */
-    transition: opacity 0.3s ease; /* Adds a smooth fade-in effect */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .project-item:hover .project-info {
-    opacity: 1; /* Becomes visible on hover */
+    opacity: 1;
 }
 
 /* -------------------------- WORK EXPERIENCE SECTION --------------------------*/
