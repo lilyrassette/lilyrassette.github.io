@@ -125,10 +125,12 @@ main {
     display: flex;
     flex-direction: column;
     color: #F1E3D3;
+    margin-top: 0px;
 }
 
 .work-experience-text h2 {
     color: #F1E3D3;
+    margin-bottom: 10px;  /* decrease space below the header */
 }
 
 .company-list {
