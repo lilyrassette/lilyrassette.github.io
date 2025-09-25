@@ -324,8 +324,8 @@ main {
 }
 
 .contact-link {
-    width: 48px; /* Correct size for the icons */
-    height: 48px;
+    width: 100px; /* Correct size for the icons */
+    height: 100px;
 }
 /* -------------------------- FOOTER --------------------------*/
 footer {
