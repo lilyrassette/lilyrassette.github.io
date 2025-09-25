@@ -180,6 +180,43 @@ main {
     opacity: 1;
 }
 
+/* Top-left corner */
+.project-item:nth-child(1) {
+    border-top-left-radius: 8px;
+}
+
+/* Top-right corner */
+.project-item:nth-child(3) {
+    border-top-right-radius: 8px;
+}
+
+/* Bottom-left corner */
+.project-item:nth-child(4) {
+    border-bottom-left-radius: 8px;
+}
+
+/* Bottom-right corner */
+.project-item:nth-child(6) {
+    border-bottom-right-radius: 8px;
+}
+
+/* Ensure the images themselves have the same rounded corners */
+.project-item:nth-child(1) img {
+    border-top-left-radius: 8px;
+}
+
+.project-item:nth-child(3) img {
+    border-top-right-radius: 8px;
+}
+
+.project-item:nth-child(4) img {
+    border-bottom-left-radius: 8px;
+}
+
+.project-item:nth-child(6) img {
+    border-bottom-right-radius: 8px;
+}
+
 /* -------------------------- WORK EXPERIENCE SECTION --------------------------*/
 .work-experience-section {
     width: 100%;
