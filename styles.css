@@ -118,16 +118,19 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     display: flex; /* Arranges the projects side-by-side */
-    justify-content: center;
+    flex-wrap: wrap; /* Allows projects to wrap to a new row */
     gap: 0; /* Removes all space between projects */
 }
 
 .project-item {
     display: block;
-    position: relative; /* This is key for the hover effect */
+    position: relative;
     overflow: hidden;
-    flex-grow: 1; /* Makes each project item fill the available space */
     height: 300px; /* Sets a fixed height for a consistent bar */
+    
+    /* Set the width to get 3 items per row */
+    flex-basis: calc(100% / 3); 
+    flex-grow: 1; /* Makes each project item fill the available space */
 }
 
 .project-item img {
