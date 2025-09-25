@@ -110,7 +110,7 @@ main {
     width: 100%;
     background-color: #457b9d; /* The blue background color */
     margin: 40px 0;
-    padding: 20px 0;
+    padding: 0;
     box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
@@ -127,9 +127,7 @@ main {
     position: relative;
     overflow: hidden;
     height: 300px; /* Sets a fixed height for a consistent bar */
-    
-    /* Set the width to get 3 items per row */
-    flex-basis: calc(100% / 3); 
+    flex-basis: calc(100% / 3); /* Sets the width to get 3 items per row */
     flex-grow: 1; /* Makes each project item fill the available space */
 }
 
