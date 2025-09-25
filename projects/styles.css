@@ -57,64 +57,68 @@ main {
     /* min-height: 80vh; */
 }
 
-/* -------------------------- ABOUT ME SECTION */
-.about-me-section {
-    display: flex;align-items: center; gap: 40px;    width: 80%;  /* Adjust this percentage as needed for your layout */
-    margin: 0 auto;
-}
-
-.about-me-text {
-    flex-grow: 1; 
-}
-
-.about-me-photo {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-}
-
-/* -------------------------- WORK EXPERIENCE SECTION */
-.work-experience-section {
-    max-width: 100%;
+.projects-page-container {
+    max-width: 1200px;
     margin: 40px auto;
-    text-align: left; /* Center the heading and logo group */
-
-    padding: 30px; 
-    background-color: #457b9d; /* A soft, earthy tone from your main section */
+    padding: 0 20px;
 }
 
-.work-experience-section h2 {
-    margin-bottom: 30px;
-    color: #F1E3D3;
-}
-
-.company-list {
+.project-category {
+    text-decoration: none;
+    color: #1d3557;
     display: flex;
-    flex-wrap: wrap; /* Allows logos to wrap to the next line on small screens */
-    justify-content: center; /* Centers the logos horizontally */
-    gap: 30px; /* Provides consistent space between each logo */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.company-logo-link {
-    display: block; /* Ensures the link takes up the full size of its container */
-    width: 120px; /* Give each logo a fixed size */
-    height: 120px;
-    padding: 10px;
-   /*  background-color: #ffffff; /* Add a white background for contrast */
-   /* border: 1px solid #ddd; */
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
-    transition: transform 0.2s, box-shadow 0.2s; /* Add a hover effect */
+/* Alternating Background Colors */
+.project-category:nth-child(2n+1) {
+    background-color: #F1E3D3; /* The lighter color for odd children */
 }
 
-.company-logo-link:hover {
-    transform: scale(1.05); /* Makes the logo slightly bigger on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow on hover */
+.project-category:nth-child(2n) {
+    background-color: #DDEBF8; /* A new lighter blue for even children */
 }
 
-.company-logo {
-    width: 100%; /* Makes the image fill its container */
-    height: 100%;
-    object-fit: contain; /* Ensures the entire logo is visible without distortion */
+.project-category:hover {
+    transform: translateY(-5px);
+}
+
+.category-details {
+    flex-basis: 45%;
+}
+
+.category-details h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.category-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-details ul li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.category-images {
+    display: flex;
+    flex-basis: 50%;
+    gap: 10px;
+}
+
+.category-images img {
+    flex-grow: 1;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* -------------------------- FOOTER */
