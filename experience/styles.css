@@ -57,7 +57,7 @@ main {
     /* min-height: 80vh; */
 }
 
-/* -------------------------- ABOUT ME SECTION */
+/* -------------------------- CV SECTION */
 .lilly-section, .bidc-section, .psr-section, .frc-section {
     display: flex;
     align-items: center;    
@@ -147,4 +147,12 @@ footer {
     .nav-links li:last-child a {
         border-bottom: none; /* No border for the last item */
     }
+
+    .lilly-section, .bidc-section, .psr-section, .frc-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+
 }
