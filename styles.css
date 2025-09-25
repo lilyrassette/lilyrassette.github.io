@@ -309,7 +309,7 @@ main {
 
 .contact-list {
     display: flex;
-    gap: 40px; /* Reduces the gap */
+    gap: 100px; /* Reduces the gap */
     align-items: center;
 }
 
