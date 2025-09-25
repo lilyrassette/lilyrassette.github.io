@@ -187,14 +187,14 @@ main {
 
 .contact-list {
     display: flex;
-    gap: 30px;
+    gap: 70px;
     align-items: center;
 }
 
 .contact-link {
     fill: #1d3557;
-    width: 24px;
-    height: 24px;
+    width: 100px;
+    height: 100px;
 }
 
 /* -------------------------- FOOTER --------------------------*/
