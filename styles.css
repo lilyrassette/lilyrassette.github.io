@@ -185,7 +185,7 @@ main {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
-    /*background-color: #457b9d;*/
+    background-color: #457b9d;
 }
 
 .work-experience-container {
@@ -240,7 +240,6 @@ main {
     width: 100%;
     margin: 40px auto; 
     padding: 30px; 
-    background-color: #457b9d;
     box-sizing: border-box; /* Ensures padding is included in the width */
 
     /* These are the key to centering the content */
@@ -252,7 +251,7 @@ main {
 
 .contact-text {
     margin-bottom: 20px;
-    color: #F1E3D3; /* Changes text color for better contrast */
+    color:#1d3557; /* Changes text color for better contrast */
     text-align: center;
 }
 
@@ -268,7 +267,7 @@ main {
 
 .contact-container h2 {
     margin: 0;
-    color: #F1E3D3;
+    color:#1d3557;
 }
 
 .contact-list {
@@ -287,21 +286,10 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.contact-logo-link:hover {
-    background-color: #F1E3D3; /* The hover color for the link background */
-}
-
 .contact-link {
-    fill: #F1E3D3; /* Changes the color of the SVG */
     width: 48px; /* Correct size for the icons */
     height: 48px;
-    transition: fill 0.3s ease;
 }
-
-.contact-link:hover {
-    fill: #1d3557; /* Changes the icon color on hover */
-}
-
 /* -------------------------- FOOTER --------------------------*/
 footer {
     text-align: center;
