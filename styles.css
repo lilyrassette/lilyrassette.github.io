@@ -117,7 +117,7 @@ main {
 .projects-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex; /* This creates the two-column layout */
+    display: flex; /* Creates the two-column layout */
     justify-content: space-between;
     align-items: center;
     gap: 40px;
@@ -126,6 +126,7 @@ main {
 /* Styles for the text column on the left */
 .projects-text-column {
     flex-basis: 40%;
+    color: white;
 }
 
 .projects-text-column h2 {
@@ -136,11 +137,11 @@ main {
     color: #F1E3D3;
 }
 
-/* Styles for the grid of images on the right */
+/* Styles for the image grid column on the right */
 .projects-grid-column {
     flex-basis: 60%;
-    display: flex;
-    flex-wrap: wrap; /* This allows the images to form a 2x3 grid */
+    display: grid; /* This is the key for the 2x3 grid */
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
     gap: 0;
 }
 
@@ -149,7 +150,6 @@ main {
     position: relative;
     overflow: hidden;
     height: 250px; /* A fixed height for a consistent grid */
-    flex-basis: calc(100% / 3); /* Sets the width for 3 items per row */
 }
 
 .project-item img {
