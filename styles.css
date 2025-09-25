@@ -90,6 +90,61 @@ main {
     /* removed margin-left to prevent overflow */
 }
 
+/* -------------------------- WORK EXPERIENCE SECTION --------------------------*/
+.work-experience-section {
+    width: 100%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #457b9d;
+}
+
+.work-experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start; /* align items at the top */
+    gap: 40px;
+}
+
+.work-experience-text {
+    display: flex;
+    flex-direction: column;
+    color:#F1E3D3;
+    margin-top: 0px;
+}
+
+.work-experience-text h2 {
+    color:#F1E3D3;
+    margin-bottom: 10px;  /* decrease space below the header */
+}
+
+.company-list {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping to prevent overflow */
+    justify-content: center;
+    gap: 30px;
+}
+
+.company-logo-link {
+    display: block;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.company-logo-link:hover {
+    transform: scale(1.05);
+    background-color: #F1E3D3;
+}
+
+.company-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* -------------------------- PHOTO BAR --------------------------*/
 .photo-bar {
     display: flex;
@@ -215,61 +270,6 @@ main {
 
 .project-item:nth-child(6) img {
     border-bottom-right-radius: 8px;
-}
-
-/* -------------------------- WORK EXPERIENCE SECTION --------------------------*/
-.work-experience-section {
-    width: 100%;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #457b9d;
-}
-
-.work-experience-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start; /* align items at the top */
-    gap: 40px;
-}
-
-.work-experience-text {
-    display: flex;
-    flex-direction: column;
-    color:#F1E3D3;
-    margin-top: 0px;
-}
-
-.work-experience-text h2 {
-    color:#F1E3D3;
-    margin-bottom: 10px;  /* decrease space below the header */
-}
-
-.company-list {
-    display: flex;
-    flex-wrap: wrap; /* allows wrapping to prevent overflow */
-    justify-content: center;
-    gap: 30px;
-}
-
-.company-logo-link {
-    display: block;
-    width: 120px;
-    height: 120px;
-    padding: 10px;
-    border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.company-logo-link:hover {
-    transform: scale(1.05);
-    background-color: #F1E3D3;
-}
-
-.company-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 /* -------------------------- CONTACT INFO --------------------------*/
