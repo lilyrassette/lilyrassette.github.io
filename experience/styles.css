@@ -70,6 +70,8 @@ main {
 
 .bidc-section, .frc-section {
     background-color: #457b9d;
+    margin: 0;         /* remove default centering */
+    border-radius: 0;  /* make it edge-to-edge */
 }
 
 .cv-text {
