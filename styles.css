@@ -238,45 +238,68 @@ main {
 /* -------------------------- CONTACT INFO --------------------------*/
 .contact-info {
     width: 100%;
-    margin: 40px auto;
-    padding: 30px;
+    margin: 40px auto; 
+    padding: 30px; 
     background-color: #457b9d;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+
+    /* These are the key to centering the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-text {
     margin-bottom: 20px;
-    color: #1d3557;
+    color: #F1E3D3; /* Changes text color for better contrast */
+    text-align: center;
 }
 
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks the content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
 }
 
 .contact-container h2 {
     margin: 0;
-    color: #1d3557;
+    color: #F1E3D3;
 }
 
 .contact-list {
     display: flex;
-    gap: 120px;
+    gap: 40px; /* Reduces the gap */
     align-items: center;
 }
 
+.contact-logo-link {
+    display: flex; /* Makes the link a container */
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Sets the link's size */
+    height: 60px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.contact-logo-link:hover {
+    background-color: #F1E3D3; /* The hover color for the link background */
+}
+
 .contact-link {
-    fill: #1d3557;
-    width: 100px;
-    height: 100px;
-    
+    fill: #F1E3D3; /* Changes the color of the SVG */
+    width: 48px; /* Correct size for the icons */
+    height: 48px;
+    transition: fill 0.3s ease;
 }
 
 .contact-link:hover {
-    transform: scale(1.05);
-    background-color: #F1E3D3;
+    fill: #1d3557; /* Changes the icon color on hover */
 }
 
 /* -------------------------- FOOTER --------------------------*/
