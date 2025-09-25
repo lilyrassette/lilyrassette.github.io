@@ -262,7 +262,7 @@ main {
 
 .contact-list {
     display: flex;
-    gap: 70px;
+    gap: 120px;
     align-items: center;
 }
 
