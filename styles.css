@@ -164,7 +164,7 @@ main {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
-    background-color: #457b9d;
+    /*background-color: #457b9d;*/
 }
 
 .work-experience-container {
@@ -178,12 +178,12 @@ main {
 .work-experience-text {
     display: flex;
     flex-direction: column;
-    color: #F1E3D3;
+    color:#1d3557;
     margin-top: 0px;
 }
 
 .work-experience-text h2 {
-    color: #F1E3D3;
+    color:#1d3557;
     margin-bottom: 10px;  /* decrease space below the header */
 }
 
