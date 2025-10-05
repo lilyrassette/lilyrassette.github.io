@@ -1,19 +1,25 @@
+/* -------------------------- GLOBAL --------------------------*/
+
 body {
     margin: 0; 
     font-family: 'Roboto', sans-serif;                            /* OVERALL FONT */
     line-height: 1.6;                                             /* FONT SIZE */
     color: #280003;                                               /* OVERALL TEXT COLOR */
     background-color: #F1E3D3;                                    /* OVERALL BACKGROUND COLOR */
-    overflow-x: hidden;                                           /* FIX: prevents horizontal scroll */
 }
 
-/* -------------------------- HEADER/NAV-BAR*/
+html, body {
+    overflow-x: hidden;                                           /* PREVENT HORIZONTAL SCROLL */
+}
+
+/* -------------------------- HEADER / NAV-BAR --------------------------*/
 
 header {
     background-color: #1d3557;                                    /* HEADER COLOR */
     position: sticky; 
     top: 0; 
     z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);                     /* SUBTLE SHADOW */
 }
 
 .navbar {
@@ -25,16 +31,23 @@ header {
     align-items: center; 
 }
 
-/* -------------------------- LOGO */
+/* -------------------------- LOGO --------------------------*/
+
 .navbar .logo a {
-    color: #457b9d;                                               /* LOGO TEXT COLOR */
-    text-decoration: none;                                        /* remove underline */
-    font-size: 1.8rem;                                            /* larger font size */
-    font-weight: bold;                                            /* bold */
-    letter-spacing: 0.5px;                                        /* letter spacing */
+    color: #F1E3D3;                                               /* LOGO TEXT COLOR */
+    text-decoration: none;                                        /* REMOVE UNDERLINE */
+    font-size: 1.8rem;                                            /* LARGER FONT SIZE */
+    font-weight: bold;                                            /* BOLD */
+    letter-spacing: 0.5px;                                        /* LETTER SPACING */
+    transition: color 0.3s ease;
 }
 
-/* -------------------------- NAV LINKS */
+.navbar .logo a:hover {
+    color: #A8DADC;                                               /* LIGHTER HOVER EFFECT */
+}
+
+/* -------------------------- NAV LINKS --------------------------*/
+
 .nav-links {
     list-style: none;
     margin: 0;
@@ -44,33 +57,35 @@ header {
 }
 
 .nav-links a {
-    color: #457b9d;                                               /* NAV LINK COLORS */
-    text-decoration: none;                                        /* remove underline */
-    padding: 0.5rem 1rem;                                         /* increase clickable area */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #F1E3D3;                                               /* NAV LINK COLOR */
+    text-decoration: none;                                        /* REMOVE UNDERLINE */
+    padding: 0.5rem 1rem;                                         /* CLICKABLE AREA */
     border-radius: 5px;
-    font-weight: bold;                                            /* bold */
+    font-weight: 500;                                             /* SEMI-BOLD */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #F1E3D3;                                    /* HOVER COLOR */
-    color: #1d3557; 
+    background-color: #F1E3D3;                                    /* HOVER BG COLOR */
+    color: #1d3557;                                               /* HOVER TEXT COLOR */
 }
 
-/* -------------------------- CATEGORY PAGES --------------------------*/
+/* -------------------------- CATEGORY PAGE --------------------------*/
+
 .category-page-main {
     max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #F1E3D3;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #fff;                                       /* CARD-LIKE BACKGROUND */
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .category-page-title {
     text-align: center;
     color: #1d3557;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -78,85 +93,147 @@ header {
     text-align: center;
     color: #457b9d;
     font-size: 1.1rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
 }
+
+/* -------------------------- PROJECT DETAIL ITEMS --------------------------*/
 
 .project-detail-item {
     display: flex;
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: 40px;
+    margin-bottom: 70px;
     align-items: flex-start;
-    flex-wrap: wrap;                                              /* FIX: allow wrapping */
-    max-width: 100%;                                              /* FIX: prevent overflow */
-    box-sizing: border-box;                                       /* FIX: predictable layout */
+    max-width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .project-detail-item:nth-child(even) {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;                                  /* ALTERNATING LAYOUT */
 }
 
 .project-detail-images {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    min-width: 0;                                                 /* FIX: prevent flex overflow */
+    gap: 20px;
 }
 
 .project-detail-images img {
     width: 100%;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    max-width: 100%;                                              /* FIX: ensure images don't overflow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-detail-images img:hover {
+    transform: scale(1.02);                                       /* SUBTLE IMAGE HOVER */
 }
 
 .project-detail-content {
     flex: 1;
-    min-width: 0;                                                 /* FIX: prevents text overflow */
+    min-width: 0;
 }
 
 .project-detail-content h2 {
     color: #1d3557;
+    font-size: 1.6rem;
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .project-detail-content p {
     color: #457b9d;
     margin-bottom: 15px;
+    line-height: 1.8;
 }
 
 .project-detail-content ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .project-detail-content ul li {
     background-color: #DDEBF8;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 10px 14px;
+    border-radius: 6px;
     margin-bottom: 8px;
     color: #1d3557;
     font-size: 0.95rem;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: #1d3557;                                   /* FOOTER COLOR */
-    color: #457b9d;
-    font-size: 0.9rem;
+/* -------------------------- PROJECT EXAMPLES (SUB PROJECTS) --------------------------*/
+
+.project-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 25px;
 }
 
-/* -------------------------- RESPONSIVE FOR CATEGORY PAGES --------------------------*/
-@media (max-width: 768px) {
+.project-example img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-example h3 {
+    color: #1d3557;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.project-example p {
+    color: #457b9d;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.other-projects-list {
+    list-style: disc;
+    margin-left: 20px;
+    color: #1d3557;
+}
+
+/* -------------------------- FOOTER --------------------------*/
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    background-color: #1d3557;                                   /* FOOTER COLOR */
+    color: #F1E3D3;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* -------------------------- RESPONSIVE DESIGN --------------------------*/
+
+@media (max-width: 900px) {
+    .category-page-main {
+        padding: 30px 20px;
+    }
+
     .project-detail-item,
     .project-detail-item:nth-child(even) {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .project-detail-images {
@@ -166,5 +243,33 @@ footer {
     .project-detail-content {
         width: 100%;
         text-align: center;
+    }
+
+    .project-detail-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-example h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .category-page-title {
+        font-size: 1.7rem;
+    }
+
+    .category-page-description {
+        font-size: 1rem;
     }
 }
