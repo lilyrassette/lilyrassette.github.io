@@ -1,50 +1,60 @@
-
 body {
     margin: 0; 
     font-family: 'Roboto', sans-serif;                            /* OVERALL FONT */
     line-height: 1.6;                                             /* FONT SIZE */
-    color: #280003;                                             /* OVERALL TEXT COLOR */
-    background-color: #F1E3D3;                                  /* OVERALL BACKGROUND COLOR */
+    color: #280003;                                               /* OVERALL TEXT COLOR */
+    background-color: #F1E3D3;                                    /* OVERALL BACKGROUND COLOR */
+    overflow-x: hidden;                                           /* FIX: prevents horizontal scroll */
 }
 
 /* -------------------------- HEADER/NAV-BAR*/
 
 header {
-    background-color: #1d3557;                                  /* HEADER COLOR */
-    position: sticky; top: 0; 
+    background-color: #1d3557;                                    /* HEADER COLOR */
+    position: sticky; 
+    top: 0; 
     z-index: 1000;
 }
 
 .navbar {
-    max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 1rem 2rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 /* -------------------------- LOGO */
 .navbar .logo a {
-    color: #457b9d;                                             /* LOGO TEXT COLOR */
-    text-decoration: none; /* remove underline */
-    font-size: 1.8rem; /* larger font size */
-    font-weight: bold; /* bold */
-    letter-spacing: 0.5px; /* letter spacing */
+    color: #457b9d;                                               /* LOGO TEXT COLOR */
+    text-decoration: none;                                        /* remove underline */
+    font-size: 1.8rem;                                            /* larger font size */
+    font-weight: bold;                                            /* bold */
+    letter-spacing: 0.5px;                                        /* letter spacing */
 }
 
 /* -------------------------- NAV LINKS */
 .nav-links {
-    list-style: none;margin: 0;padding: 0; display: flex; gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+    display: flex; 
+    gap: 25px;
 }
 
 .nav-links a {
-    color: #457b9d;                                             /* NAV LINK COLORS */
-    text-decoration: none; /*remove underline */
-    padding: 0.5rem 1rem; /* increase clickable area */
+    color: #457b9d;                                               /* NAV LINK COLORS */
+    text-decoration: none;                                        /* remove underline */
+    padding: 0.5rem 1rem;                                         /* increase clickable area */
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
-    font-weight: bold; /*bold*/
+    font-weight: bold;                                            /* bold */
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #F1E3D3;                                  /* HOVER COLOR*/
+    background-color: #F1E3D3;                                    /* HOVER COLOR */
     color: #1d3557; 
 }
 
@@ -76,9 +86,11 @@ header {
     gap: 30px;
     margin-bottom: 60px;
     align-items: flex-start;
+    flex-wrap: wrap;                                              /* FIX: allow wrapping */
+    max-width: 100%;                                              /* FIX: prevent overflow */
+    box-sizing: border-box;                                       /* FIX: predictable layout */
 }
 
-/* Reverse layout for alternating projects */
 .project-detail-item:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -88,6 +100,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-width: 0;                                                 /* FIX: prevent flex overflow */
 }
 
 .project-detail-images img {
@@ -96,10 +109,12 @@ header {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    max-width: 100%;                                              /* FIX: ensure images don't overflow */
 }
 
 .project-detail-content {
     flex: 1;
+    min-width: 0;                                                 /* FIX: prevents text overflow */
 }
 
 .project-detail-content h2 {
@@ -127,9 +142,10 @@ header {
     font-size: 0.95rem;
 }
 
-
 footer {
-    text-align: center;padding: 20px;margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
     background-color: #1d3557;                                   /* FOOTER COLOR */
     color: #457b9d;
     font-size: 0.9rem;
