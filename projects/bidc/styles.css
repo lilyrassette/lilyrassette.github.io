@@ -5,7 +5,7 @@ html, body {
   overflow-x: hidden;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #1d3557;
-  background-color:#F1E3D3;
+  background-color: #F1E3D3;
   line-height: 1.6;
 }
 
@@ -19,7 +19,7 @@ html, body {
 }
 
 .logo a {
-  color:#457b9d;
+  color: #457b9d;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: bold;
@@ -33,13 +33,13 @@ html, body {
 }
 
 .nav-links a {
-  color:#457b9d;
+  color: #457b9d;
   text-decoration: none;
   font-weight: 500;
 }
 
 .nav-links a:hover {
-  color:#F1E3D3;
+  color: #F1E3D3;
 }
 
 /* Main Section */
@@ -66,10 +66,10 @@ html, body {
 /* Project Layout */
 .project-detail-item {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 90px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 100px;
 }
 
 .project-detail-item:nth-child(even) {
@@ -78,7 +78,7 @@ html, body {
 
 /* Images */
 .project-detail-images {
-  flex: 1 1 45%;
+  flex: 0 0 40%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -86,22 +86,23 @@ html, body {
 
 .project-detail-images img {
   width: 100%;
-  height: auto;
   border-radius: 8px;
   object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Text Content */
 .project-detail-content {
-  flex: 1 1 50%;
+  flex: 0 0 55%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 12px;
 }
 
 .project-detail-content h2 {
-  font-size: 1.6rem;
-  margin-bottom: 5px;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
   color: #1d3557;
 }
 
@@ -121,6 +122,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-top: 20px;
 }
 
 .project-example img {
@@ -159,10 +161,27 @@ footer a {
 @media (max-width: 900px) {
   .project-detail-item {
     flex-direction: column;
+    text-align: center;
   }
-  .project-detail-images, .project-detail-content {
+
+  .project-detail-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .project-detail-images,
+  .project-detail-content {
     flex: 1 1 100%;
   }
+
+  .project-detail-images img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .project-detail-content h2 {
+    margin-top: 20px;
+  }
+
   .category-page-main {
     margin: 60px auto;
   }
