@@ -5,7 +5,7 @@ html, body {
   overflow-x: hidden;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #1d3557;
-  background-color: #fdfdfd;
+  background-color:#F1E3D3;
   line-height: 1.6;
 }
 
@@ -19,7 +19,7 @@ html, body {
 }
 
 .logo a {
-  color: #F1E3D3;
+  color:#457b9d;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: bold;
@@ -33,13 +33,13 @@ html, body {
 }
 
 .nav-links a {
-  color: #F1E3D3;
+  color:#457b9d;
   text-decoration: none;
   font-weight: 500;
 }
 
 .nav-links a:hover {
-  color: #a8dadc;
+  color:#F1E3D3;
 }
 
 /* Main Section */
@@ -89,7 +89,6 @@ html, body {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* Text Content */
@@ -129,7 +128,6 @@ html, body {
   height: auto;
   border-radius: 8px;
   margin-bottom: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .project-example h3 {
