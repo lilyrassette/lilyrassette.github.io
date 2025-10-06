@@ -1,4 +1,4 @@
-/* General Layout */
+/* -------------------------- GENERAL -------------------------- */
 html, body {
   margin: 0;
   padding: 0;
@@ -9,37 +9,55 @@ html, body {
   line-height: 1.6;
 }
 
-
-/* -------------------------- LOGO */
-.navbar .logo a {
-    color: #457b9d;                                             /* LOGO TEXT COLOR */
-    text-decoration: none; /* remove underline */
-    font-size: 1.8rem; /* larger font size */
-    font-weight: bold; /* bold */
-    letter-spacing: 0.5px; /* letter spacing */
+/* -------------------------- HEADER / NAVBAR -------------------------- */
+header {
+  background-color: #1d3557;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* -------------------------- NAV LINKS */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo a {
+  color: #457b9d;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
 .nav-links {
-    list-style: none;margin: 0;padding: 0; display: flex; gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
 }
 
 .nav-links a {
-    color: #457b9d;                                             /* NAV LINK COLORS */
-    text-decoration: none; /*remove underline */
-    padding: 0.5rem 1rem; /* increase clickable area */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    font-weight: bold; /*bold*/
+  color: #457b9d;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #F1E3D3;                                  /* HOVER COLOR*/
-    color: #1d3557; 
+  background-color: #F1E3D3;
+  color: #1d3557;
 }
 
-/* Main Section */
+/* -------------------------- MAIN SECTION -------------------------- */
 .category-page-main {
   max-width: 1100px;
   margin: 80px auto;
@@ -58,24 +76,25 @@ html, body {
   margin: 0 auto 60px;
   text-align: center;
   color: #457b9d;
+  font-size: 1.1rem;
 }
 
-/* Project Layout */
+/* -------------------------- PROJECT ITEMS -------------------------- */
 .project-detail-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 100px;
+  flex-wrap: wrap;
 }
 
 .project-detail-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-/* Images */
 .project-detail-images {
-  flex: 0 0 40%;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -83,14 +102,14 @@ html, body {
 
 .project-detail-images img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* Text Content */
 .project-detail-content {
-  flex: 0 0 55%;
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,17 +123,25 @@ html, body {
 }
 
 .project-detail-content p {
-  color: #333;
+  color: #457b9d;
   font-size: 1rem;
 }
 
 .project-detail-content ul {
-  list-style: disc;
-  padding-left: 20px;
-  color: #333;
+  list-style: none;
+  padding: 0;
 }
 
-/* Nested Examples */
+.project-detail-content ul li {
+  background-color: #DDEBF8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  color: #1d3557;
+  font-size: 0.95rem;
+}
+
+/* -------------------------- PROJECT EXAMPLES (nested) -------------------------- */
 .project-examples {
   display: flex;
   flex-direction: column;
@@ -127,6 +154,7 @@ html, body {
   height: auto;
   border-radius: 8px;
   margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-example h3 {
@@ -138,9 +166,10 @@ html, body {
 .other-projects-list {
   margin-top: 10px;
   padding-left: 18px;
+  color: #1d3557;
 }
 
-/* Footer */
+/* -------------------------- FOOTER -------------------------- */
 footer {
   background-color: #1d3557;
   color: #F1E3D3;
@@ -152,27 +181,30 @@ footer {
 
 footer a {
   color: #a8dadc;
+  text-decoration: none;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .project-detail-item {
-    flex-direction: column;
-    text-align: center;
-  }
+footer a:hover {
+  text-decoration: underline;
+}
 
+/* -------------------------- RESPONSIVE -------------------------- */
+@media (max-width: 900px) {
+  .project-detail-item,
   .project-detail-item:nth-child(even) {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .project-detail-images,
   .project-detail-content {
     flex: 1 1 100%;
+    max-width: 90%;
   }
 
   .project-detail-images img {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
   }
 
   .project-detail-content h2 {
