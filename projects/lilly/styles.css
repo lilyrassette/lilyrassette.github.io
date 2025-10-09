@@ -55,17 +55,17 @@ header {
     padding: 20px;
     background-color: #F1E3D3;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
 }
 
 .category-page-title {
-    text-align: center;
+    text-align: left;
     color: #1d3557;
     margin-bottom: 10px;
 }
 
 .category-page-description {
-    text-align: center;
+    text-align: left;
     color: #457b9d;
     font-size: 1.1rem;
     margin-bottom: 40px;
