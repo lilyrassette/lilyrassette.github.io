@@ -53,7 +53,7 @@ header {
 /* ---------- MAIN SECTION ---------- */
 .category-page-main {
   max-width: 1100px;
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 0 20px;
 }
 
@@ -76,7 +76,7 @@ header {
 .summary-section {
   text-align: left;
   max-width: 800px;
-  margin: 100px auto 80px;
+  margin: 60px auto 80px;
 }
 
 .summary-section h2 {
