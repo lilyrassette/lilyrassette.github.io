@@ -64,13 +64,13 @@ header {
 
 .category-page-title {
   font-size: 2.6rem;
-  text-align: center;
+  text-align: left;
   margin-bottom: 16px;
   color: #1d3557;
 }
 
 .category-page-description {
-  text-align: center;
+  text-align: left;
   max-width: 800px;
   margin: 0 auto 60px;
   color: #457b9d;
@@ -79,7 +79,7 @@ header {
 
 /* ---------- SUMMARY SECTIONS ---------- */
 .summary-section {
-  text-align: center;
+  text-align: left;
   max-width: 800px;
   margin: 100px auto 80px;
 }
@@ -121,7 +121,6 @@ header {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 .project-detail-content {
