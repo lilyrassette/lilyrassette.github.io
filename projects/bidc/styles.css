@@ -9,50 +9,45 @@ html, body {
   line-height: 1.6;
 }
 
-/* ---------- HEADER / NAVBAR ---------- */
+/* -------------------------- HEADER/NAV-BAR*/
+
 header {
-  background-color: #1d3557;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    background-color: #1d3557;                                  /* HEADER COLOR */
+    position: sticky; top: 0; 
+    z-index: 1000;
 }
 
 .navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; 
 }
 
-.logo a {
-  color: #a8dadc;
-  text-decoration: none;
-  font-size: 1.8rem;
-  font-weight: bold;
+/* -------------------------- LOGO */
+.navbar .logo a {
+    color: #457b9d;                                             /* LOGO TEXT COLOR */
+    text-decoration: none; /* remove underline */
+    font-size: 1.8rem; /* larger font size */
+    font-weight: bold; /* bold */
+    letter-spacing: 0.5px; /* letter spacing */
 }
 
+/* -------------------------- NAV LINKS */
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+    list-style: none;margin: 0;padding: 0; display: flex; gap: 25px;
 }
 
 .nav-links a {
-  color: #a8dadc;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: all 0.3s ease;
+    color: #457b9d;                                             /* NAV LINK COLORS */
+    text-decoration: none; /*remove underline */
+    padding: 0.5rem 1rem; /* increase clickable area */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold; /*bold*/
 }
 
-.nav-links a:hover {
-  background-color: #F1E3D3;
-  color: #1d3557;
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #F1E3D3;                                  /* HOVER COLOR*/
+    color: #1d3557; 
 }
 
 /* ---------- MAIN SECTION ---------- */
