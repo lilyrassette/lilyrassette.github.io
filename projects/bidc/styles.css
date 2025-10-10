@@ -141,11 +141,11 @@ header {
 }
 
 .project-detail-content li {
-  background-color: #DDEBF8;
+  background-color:#457b9d;
   padding: 8px 12px;
   border-radius: 6px;
   margin-bottom: 8px;
-  color: #1d3557;
+  color:#F1E3D3;
   font-size: 0.95rem;
 }
 
