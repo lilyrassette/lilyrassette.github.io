@@ -3,140 +3,115 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* use system sans-serif for body text */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #0b0b0b;                      /* darker, neutral text */
-  background-color: #fbfbf8;           /* near-white, airy background */
-  line-height: 1.7;                    /* a bit more breathing room */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #3d3a34; /* Warm gray text */
+  background-color: #faf7f2; /* Soft cream background */
+  line-height: 1.7;
 }
 
 /* -------------------------- HEADER/NAV-BAR*/
 
 header {
-    background: transparent;           /* flat, no heavy block color */
-    position: sticky; top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(4px);        /* subtle frosted effect when scrolling */
+  background-color: transparent;
+  position: sticky; top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e6dfd7;
+  backdrop-filter: blur(10px);
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.25rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* -------------------------- LOGO */
 .navbar .logo a {
-    /* serif-like heading using system fonts fallback */
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #0b0b0b;                     /* neutral heading color */
-    text-decoration: none; /* remove underline */
-    font-size: 1.6rem;                  /* slightly refined size */
-    font-weight: 600;                   /* semi-bold feeling */
-    letter-spacing: 0.4px;              /* subtle letter spacing */
+  color: #5a6a57; /* Muted moss green */
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
-/* small subtitle under logo (optional if present in HTML) */
-.navbar .logo .subtext {
+.logo .subtext {
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
+  color: #9d8c7c;
   text-transform: uppercase;
-  letter-spacing: 1.4px;
-  color: #9ca3af;                      /* soft accent */
-  margin-top: 0.25rem;
+  letter-spacing: 1px;
 }
 
 /* -------------------------- NAV LINKS */
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 22px;
-    align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
 }
 
 .nav-links a {
-    color: #0b0b0b;                     /* neutral link color */
-    text-decoration: none;              /* remove underline */
-    padding: 0.25rem 0.5rem;            /* smaller clickable area for minimalist feel */
-    transition: color 0.18s ease, transform 0.18s ease;
-    border-radius: 0;
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1.4px;
-}
-
-/* underline-on-hover effect but subtle */
-.nav-links a::after{
-  content: "";
-  display: block;
-  height: 1px;
-  background: transparent;
-  transition: background 0.18s ease, width 0.18s ease;
-  width: 0%;
-  margin-top: 6px;
+  font-family: "Courier New", Courier, monospace; /* typewriter font */
+  color: #7c5b4f; /* Terracotta link */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+  font-weight: 500;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    color: #6b7280;                     /* muted dark gray on hover */
-}
-
-.nav-links a:hover::after{
-  width: 100%;
-  background: #6b7280;
+  color: #3d3a34;
+  background-color: #f1e6d9;
 }
 
 /* ---------- MAIN SECTION ---------- */
 .category-page-main {
-  max-width: 720px;                    /* narrower column for Sawbill-like feel */
-  margin: 90px auto;                   /* more top spacing for breathing room */
+  max-width: 1000px;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
 .category-page-title {
-  font-family: Georgia, "Times New Roman", Times, serif;  /* serif heading */
-  font-size: 2.6rem;
-  text-align: left;                    /* keep your left alignment */
-  margin-bottom: 18px;
-  color: #0b0b0b;
-  line-height: 1.05;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2.8rem;
+  text-align: left;
+  margin-bottom: 16px;
+  color: #4a5b46; /* moss green */
+  letter-spacing: -0.5px;
 }
 
 .category-page-description {
   text-align: left;
-  max-width: 640px;
-  color: #6b7280;                       /* soft gray-blue accent for body copy */
-  font-size: 1.06rem;
-  margin-bottom: 1.75rem;
+  max-width: 750px;
+  color: #6f665f;
+  font-size: 1.1rem;
 }
 
 /* ---------- SUMMARY SECTIONS ---------- */
 .summary-section {
   text-align: left;
-  max-width: 640px;
-  margin-bottom: 2.5rem;
+  max-width: 750px;
+  margin: 60px 0;
 }
 
 .summary-section h2 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.85rem;
-  margin-bottom: 12px;
-  color: #0b0b0b;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #4a5b46;
 }
 
 .summary-section p {
-  color: #6b7280;
-  font-size: 1.02rem;
-  margin: 0;
+  color: #6f665f;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* ---------- PROJECTS ---------- */
@@ -144,35 +119,32 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
-  margin-bottom: 80px;                 /* reduced to reflect airy layout */
-  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 100px;
 }
 
-/* alternate layout */
 .project-detail-item:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
-/* two images side by side */
 .project-detail-images {
   flex: 1 1 45%;
   display: flex;
-  gap: 12px;
+  gap: 15px;
 }
 
 .project-detail-images img {
   width: 50%;
   height: auto;
-  border-radius: 6px;                  /* softer corner radius */
+  border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(11, 11, 11, 0.04); /* subtle shadow for depth */
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 6px rgba(60, 52, 41, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-detail-images img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(11, 11, 11, 0.06);
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(60, 52, 41, 0.15);
 }
 
 .project-detail-content {
@@ -180,64 +152,57 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .project-detail-content h2 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.6rem;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.8rem;
   margin-bottom: 6px;
-  color: #0b0b0b;
+  color: #4a5b46;
 }
 
 .project-detail-content p {
-  color: #6b7280;
+  color: #6f665f;
   font-size: 1rem;
-  margin: 0;
 }
 
 .project-detail-content ul {
   list-style: none;
   padding: 0;
-  margin: 0.6rem 0 0 0;
 }
 
 .project-detail-content li {
-  background-color: transparent;       /* remove heavy colored pills */
-  padding: 0;
+  background-color: #e8d5c4;
+  padding: 8px 12px;
   border-radius: 6px;
-  margin-bottom: 6px;
-  color: #0b0b0b;
+  margin-bottom: 8px;
+  color: #3d3a34;
   font-size: 0.95rem;
-  display: inline-block;
-  font-style: normal;
-}
-
-/* make list items italic & subtle label-like */
-.project-detail-content li strong {
-  color: #0b0b0b;
+  font-weight: 500;
 }
 
 /* ---------- FOOTER ---------- */
 footer {
-  background: transparent;             /* flat footer - no block color */
-  color: #6b7280;
+  background-color: transparent;
+  color: #6f665f;
   text-align: center;
-  padding: 36px 20px;
+  padding: 50px 20px;
   font-size: 0.9rem;
   line-height: 1.6;
-  margin-top: 3rem;
-  border-top: 1px solid rgba(11,11,11,0.04); /* subtle divider from content */
+  border-top: 1px solid #e6dfd7;
+  margin-top: 80px;
 }
 
 footer a {
-  color: #0b0b0b;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  color: #7c5b4f;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 footer a:hover {
-  color: #6b7280;
+  text-decoration: underline;
+  color: #3d3a34;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -251,7 +216,6 @@ footer a:hover {
 
   .project-detail-images {
     flex-direction: column;
-    width: 100%;
   }
 
   .project-detail-images img {
@@ -264,13 +228,5 @@ footer a:hover {
 
   .category-page-main {
     margin: 60px auto;
-  }
-
-  .navbar {
-    padding: 1rem 1rem;
-  }
-
-  .navbar .logo a {
-    font-size: 1.4rem;
   }
 }
