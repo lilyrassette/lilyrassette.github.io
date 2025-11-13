@@ -7,7 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Inter', 'Work Sans', sans-serif; /* Modern, clean font */
     line-height: 1.6;
     color: #2f2d2b;
     background-color: #faf9f7;
@@ -37,7 +37,7 @@ header {
     text-decoration: none;
     font-size: 1.8rem;
     font-weight: 600;
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: 'Montserrat', sans-serif; /* Smooth, modern logo font */
 }
 
 .nav-links {
@@ -49,14 +49,15 @@ header {
 }
 
 .nav-links a {
-    font-family: "Courier New", Courier, monospace; /* typewriter style */
+    font-family: 'Work Sans', sans-serif; /* Cohesive modern font */
     color: #2f2d2b;
     text-decoration: none;
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1.6px;
+    text-transform: none; /* Removed all caps */
+    letter-spacing: 0.5px; /* Reduced spacing */
+    font-weight: 500;
 }
 
 .nav-links a::after {
@@ -65,8 +66,8 @@ header {
     left: 0;
     bottom: 0;
     width: 0%;
-    height: 1.5px;
-    background-color: #c46a46; /* terracotta accent */
+    height: 2px;
+    background-color: #c46a46; /* Terracotta accent */
     transition: width 0.3s ease;
 }
 
@@ -77,7 +78,7 @@ header {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    color: #c46a46;
+    color: #7a9e9f; /* Muted blue hover for subtle color pop */
 }
 
 /* -------------------------- MAIN CONTENT -------------------------- */
@@ -112,7 +113,7 @@ main {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
-    background-color: #c46a46; /* terracotta */
+    background-color: #c46a46; /* Terracotta */
     border-radius: 8px;
 }
 
@@ -127,16 +128,17 @@ main {
 .work-experience-text {
     display: flex;
     flex-direction: column;
-    color:#faf9f7;
+    color: #faf9f7;
 }
 
 .work-experience-text h2 {
     margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: "Georgia", serif;
+    text-transform: none; /* Removed all caps */
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* -------------------------- COMPANY LIST -------------------------- */
 .company-list {
     display: flex;
     flex-wrap: wrap;
@@ -199,10 +201,10 @@ main {
 }
 
 .projects-text-column h2 {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: "Georgia", serif;
-    border-left: 3px solid #c46a46; /* terracotta accent */
+    text-transform: none; /* Removed all caps */
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    border-left: 3px solid #c46a46; /* Terracotta accent */
     padding-left: 10px;
     margin-bottom: 10px;
 }
@@ -242,7 +244,7 @@ main {
     left: 0;
     width: 100%;
     padding: 20px;
-    background-color: rgba(196, 106, 70, 0.85); /* terracotta overlay */
+    background-color: rgba(196, 106, 70, 0.85); /* Terracotta overlay */
     color: #faf9f7;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -255,7 +257,7 @@ main {
 /* Moss green dot before project titles for subtle accent */
 .project-info h3::before {
     content: "•";
-    color: #6a7a57; /* moss green */
+    color: #6a7a57; /* Moss green */
     margin-right: 8px;
 }
 
@@ -273,14 +275,15 @@ main {
 
 .contact-text {
     margin-bottom: 20px;
-    color:#2f2d2b;
+    color: #2f2d2b;
 }
 
 .contact-container h2 {
     margin: 0;
-    color:#2f2d2b;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #2f2d2b;
+    text-transform: none; /* Removed all caps */
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contact-list {
@@ -310,7 +313,7 @@ footer {
     padding: 40px 20px;
     margin-top: 40px;
     background-color: #2f2d2b;
-    color: #c46a46; /* terracotta accent */
+    color: #c46a46; /* Terracotta accent */
     font-size: 0.9rem;
 }
 
