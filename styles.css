@@ -271,17 +271,48 @@ main {
     text-align: center;
 }
 
-.contact-icons {
-    flex: 1;
+/* Container for all icons */
+.contact-list {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: center; /* Centers icons horizontally */
+    gap: 30px; /* Space between icons */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
-.contact-icons img {
-    width: 10px;
-    height: 10px;
+/* Each clickable link wrapper */
+.contact-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Wrapper size */
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0e8e2; /* Optional subtle background */
+    transition: background-color 0.3s ease;
 }
+
+.contact-logo-link:hover {
+    background-color: #c46a46; /* Terracotta hover */
+}
+
+/* The actual SVG image */
+.contact-link {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contact-logo-link {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-link {
+        width: 28px;
+        height: 28px;
+    }
+}
+
 
 /* -------------------------- FOOTER -------------------------- */
 /* ---------- FOOTER ---------- */
