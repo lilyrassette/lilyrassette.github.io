@@ -140,10 +140,10 @@ main {
 
 /* -------------------------- COMPANY LIST -------------------------- */
 .company-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 in a row on desktop */
+    gap: 20px;
+    justify-items: center;
 }
 
 .company-logo-link {
@@ -183,53 +183,53 @@ main {
 /* -------------------------- PROJECTS SECTION -------------------------- */
 .projects-section {
     width: 100%;
-    margin: 40px 0;
-    padding: 20px 0;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #f0e8e2; /* Soft beige background for sectioning */
+    border-radius: 8px;
 }
 
 .projects-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .projects-text-column {
-    flex-basis: 40%;
-    color: #2f2d2b;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .projects-text-column h2 {
-    text-transform: none; /* Removed all caps */
-    letter-spacing: 0.5px;
     font-family: 'Montserrat', sans-serif;
-    border-left: 3px solid #c46a46; /* Terracotta accent */
-    padding-left: 10px;
+    font-size: 2rem;
     margin-bottom: 10px;
+    color: #2f2d2b;
 }
 
 .projects-text-column p {
     color: #55524f;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .projects-grid-column {
-    flex-basis: 60%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .project-item {
-    display: block;
     position: relative;
     overflow: hidden;
-    height: 250px;
+    border-radius: 8px;
 }
 
 .project-item img {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -243,7 +243,7 @@ main {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(196, 106, 70, 0.85); /* Terracotta overlay */
     color: #faf9f7;
     opacity: 0;
@@ -254,108 +254,66 @@ main {
     opacity: 1;
 }
 
-/* Moss green dot before project titles for subtle accent */
-.project-info h3::before {
-    content: "•";
-    color: #6a7a57; /* Moss green */
-    margin-right: 8px;
-}
-
 /* -------------------------- CONTACT INFO -------------------------- */
 .contact-info {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .contact-text {
-    margin-bottom: 20px;
-    color: #2f2d2b;
+    flex: 1;
+    text-align: center;
 }
 
-.contact-container h2 {
-    margin: 0;
-    color: #2f2d2b;
-    text-transform: none; /* Removed all caps */
-    letter-spacing: 0.5px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contact-list {
+.contact-icons {
+    flex: 1;
     display: flex;
-    gap: 100px;
-    align-items: center;
-}
-
-.contact-logo-link {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+    gap: 30px;
 }
 
-.contact-link {
-    width: 100px;
-    height: 100px;
+.contact-icons img {
+    width: 50px;
+    height: 50px;
 }
 
 /* -------------------------- FOOTER -------------------------- */
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
     margin-top: 40px;
-    background-color: #2f2d2b;
-    color: #c46a46; /* Terracotta accent */
+    background-color: #faf9f7; /* Match other pages */
+    color: #2f2d2b;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: #c46a46;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* -------------------------- RESPONSIVE -------------------------- */
 @media (max-width: 768px) {
-    .navbar {
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .navbar .logo {
-        margin-bottom: 15px;
-    }
-
-    .nav-links {
-        width: 100%;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 10px 15px;
-        border-radius: 0;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .about-me-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-me-photo {
-        margin: 0 auto;
-    }
-
     .work-experience-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .company-list {
-        justify-content: flex-start;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on mobile */
+    }
+
+    .projects-container {
+        padding: 0 10px;
     }
 }
