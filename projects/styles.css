@@ -70,12 +70,14 @@ main {
     background-color: #faf9f7;
 }
 
+/* -------------------------- PROJECTS PAGE CONTAINER */
 .projects-page-container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
+/* -------------------------- PROJECT CATEGORY */
 .project-category {
     text-decoration: none;
     color: #2f2d2b;
@@ -85,23 +87,30 @@ main {
     margin-bottom: 20px;
     padding: 30px;
     border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-/* Alternating Background Colors */
-.project-category:nth-child(2n+1) {
-    background-color: #faf9f7; /* Light neutral for odd */
-}
-
-.project-category:nth-child(2n) {
-    background-color: #7a9e9f; /* Muted blue for even */
-    color: #faf9f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eae5e0; /* Subtle border */
+    background-color: #ffffff; /* Neutral background */
 }
 
 .project-category:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-color: #c46a46; /* Terracotta accent on hover */
 }
 
+/* Add subtle accent strip on left */
+.project-category::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: #6a7a57; /* Moss green accent */
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+/* -------------------------- CATEGORY DETAILS */
 .category-details {
     flex-basis: 45%;
 }
@@ -112,6 +121,7 @@ main {
     font-family: 'Montserrat', sans-serif;
     text-transform: none; /* Removed all caps */
     letter-spacing: 0.5px;
+    color: #2f2d2b;
 }
 
 .category-details ul {
@@ -122,8 +132,10 @@ main {
 .category-details ul li {
     font-size: 1.1rem;
     margin-bottom: 5px;
+    color: #55524f;
 }
 
+/* -------------------------- CATEGORY IMAGES */
 .category-images {
     display: flex;
     flex-basis: 50%;
@@ -138,25 +150,24 @@ main {
 }
 
 /* -------------------------- FOOTER */
-/* ---------- FOOTER ---------- */
 footer {
-  background-color: #ffffff;
-  color: #55524f;
-  text-align: center;
-  padding: 50px 20px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  border-top: 1px solid #eae5e0;
-  margin-top: 80px;
+    background-color: #ffffff;
+    color: #55524f;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-top: 1px solid #eae5e0;
+    margin-top: 80px;
 }
 
 footer a {
-  color: #c46a46;
-  text-decoration: none;
+    color: #c46a46; /* Terracotta accent */
+    text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* -------------------------- RESPONSIVE */
