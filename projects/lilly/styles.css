@@ -1,154 +1,255 @@
-
-body {
-    margin: 0; 
-    font-family: 'Roboto', sans-serif;                            /* OVERALL FONT */
-    line-height: 1.6;                                             /* FONT SIZE */
-    color: #280003;                                             /* OVERALL TEXT COLOR */
-    background-color: #F1E3D3;                                  /* OVERALL BACKGROUND COLOR */
+/* ---------- GENERAL ---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', 'Work Sans', sans-serif; /* Modern, clean font */
+  color: #1f1f1d;
+  background-color: #faf9f7;
+  line-height: 1.7;
 }
 
-/* -------------------------- HEADER/NAV-BAR*/
-
+/* -------------------------- HEADER/NAV-BAR */
 header {
-    background-color: #1d3557;                                  /* HEADER COLOR */
-    position: sticky; top: 0; 
-    z-index: 1000;
+  background-color: #ffffffee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eae5e0;
+  backdrop-filter: blur(10px);
 }
 
 .navbar {
-    max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* -------------------------- LOGO */
 .navbar .logo a {
-    color: #457b9d;                                             /* LOGO TEXT COLOR */
-    text-decoration: none; /* remove underline */
-    font-size: 1.8rem; /* larger font size */
-    font-weight: bold; /* bold */
-    letter-spacing: 0.5px; /* letter spacing */
+  color: #2f2d2b;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif; /* Smooth, modern logo font */
 }
 
 /* -------------------------- NAV LINKS */
 .nav-links {
-    list-style: none;margin: 0;padding: 0; display: flex; gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
 }
 
 .nav-links a {
-    color: #457b9d;                                             /* NAV LINK COLORS */
-    text-decoration: none; /*remove underline */
-    padding: 0.5rem 1rem; /* increase clickable area */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    font-weight: bold; /*bold*/
+  font-family: 'Work Sans', sans-serif; /* Cohesive modern font */
+  color: #2f2d2b;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+  text-transform: none; /* Removed all caps */
+  letter-spacing: 0.5px; /* Reduced spacing */
+  font-weight: 500;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #c46a46; /* Terracotta accent */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+  width: 100%;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #F1E3D3;                                  /* HOVER COLOR*/
-    color: #1d3557; 
+  color: #7a9e9f; /* Muted blue hover for subtle color pop */
 }
 
-/* -------------------------- CATEGORY PAGES --------------------------*/
+/* ---------- MAIN SECTION ---------- */
 .category-page-main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #F1E3D3;
-    border-radius: 8px;
-   
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
 }
 
 .category-page-title {
-    text-align: left;
-    color: #1d3557;
-    margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #2f2d2b;
+  border-bottom: 1px solid #e9e3de;
+  padding-bottom: 8px;
+  text-transform: none; /* Removed all caps */
+  letter-spacing: 0.5px;
+  position: relative;
 }
 
-.category-page-description {
-    text-align: left;
-    color: #457b9d;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
+.category-page-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 40px;
+  height: 2px;
+  background-color: #6a7a57; /* Moss green accent */
 }
 
+/* ---------- SUMMARY SECTIONS ---------- */
+.summary-section {
+  text-align: left;
+  max-width: 750px;
+  margin: 60px 0;
+}
+
+.summary-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2f2d2b;
+  border-left: 3px solid #c46a46; /* Terracotta accent */
+  padding-left: 10px;
+  text-transform: none; /* Removed all caps */
+  letter-spacing: 0.5px;
+}
+
+.summary-section p {
+  color: #55524f;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ---------- PROJECTS ---------- */
 .project-detail-item {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 60px;
-    align-items: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 100px;
 }
 
-/* Reverse layout for alternating projects */
-.project-detail-item:nth-child(even) {
-    flex-direction: row-reverse;
+.project-detail-item:nth-of-type(even) {
+  flex-direction: row-reverse;
 }
 
 .project-detail-images {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  flex: 1 1 45%;
+  display: flex;
+  gap: 15px;
 }
 
 .project-detail-images img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-detail-images img:hover {
+  transform: scale(1.015);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .project-detail-content {
-    flex: 1;
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
 }
 
 .project-detail-content h2 {
-    color: #1d3557;
-    margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+  color: #2f2d2b;
 }
 
 .project-detail-content p {
-    color: #457b9d;
-    margin-bottom: 15px;
+  color: #55524f;
+  font-size: 1rem;
 }
 
 .project-detail-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
 }
 
-.project-detail-content ul li {
-    background-color: #DDEBF8;
-    padding: 8px 12px;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    color: #1d3557;
-    font-size: 0.95rem;
+.project-detail-content li {
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  color: #3b3835;
+  font-size: 0.95rem;
+  border-left: 2px solid #c46a46; /* terracotta */
 }
 
+/* subtle moss green dot at the start of each project title (small pop of color) */
+.project-detail-content h2::before {
+  content: "•";
+  color: #6a7a57;
+  margin-right: 8px;
+}
 
+/* ---------- FOOTER ---------- */
 footer {
-    text-align: center;padding: 20px;margin-top: 40px;
-    background-color: #1d3557;                                   /* FOOTER COLOR */
-    color: #457b9d;
-    font-size: 0.9rem;
+  background-color: #ffffff;
+  color: #55524f;
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-top: 1px solid #eae5e0;
+  margin-top: 80px;
 }
 
-/* -------------------------- RESPONSIVE FOR CATEGORY PAGES --------------------------*/
-@media (max-width: 768px) {
-    .project-detail-item,
-    .project-detail-item:nth-child(even) {
-        flex-direction: column;
-        align-items: center;
-    }
+footer a {
+  color: #c46a46;
+  text-decoration: none;
+}
 
-    .project-detail-images {
-        width: 100%;
-    }
+footer a:hover {
+  text-decoration: underline;
+}
 
-    .project-detail-content {
-        width: 100%;
-        text-align: center;
-    }
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .project-detail-item,
+  .project-detail-item:nth-of-type(even) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-detail-images {
+    flex-direction: column;
+  }
+
+  .project-detail-images img {
+    width: 100%;
+  }
+
+  .project-detail-content {
+    flex: 1 1 100%;
+  }
+
+  .category-page-main {
+    margin: 60px auto;
+  }
 }
