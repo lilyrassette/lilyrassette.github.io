@@ -7,7 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Inter', 'Work Sans', sans-serif; /* Modern, clean font */
     line-height: 1.6;
     color: #2f2d2b;
     background-color: #faf9f7;
@@ -37,7 +37,7 @@ header {
     text-decoration: none;
     font-size: 1.8rem;
     font-weight: 600;
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: 'Montserrat', sans-serif; /* Smooth, modern logo font */
 }
 
 .nav-links {
@@ -49,14 +49,15 @@ header {
 }
 
 .nav-links a {
-    font-family: "Courier New", Courier, monospace; /* typewriter style */
+    font-family: 'Work Sans', sans-serif; /* Cohesive modern font */
     color: #2f2d2b;
     text-decoration: none;
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1.6px;
+    text-transform: none; /* Removed all caps */
+    letter-spacing: 0.5px; /* Reduced spacing */
+    font-weight: 500;
 }
 
 .nav-links a::after {
@@ -65,8 +66,8 @@ header {
     left: 0;
     bottom: 0;
     width: 0%;
-    height: 1.5px;
-    background-color: #c46a46; /* terracotta accent */
+    height: 2px;
+    background-color: #c46a46; /* Terracotta accent */
     transition: width 0.3s ease;
 }
 
@@ -77,7 +78,7 @@ header {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    color: #c46a46;
+    color: #7a9e9f; /* Muted blue hover for subtle color pop */
 }
 
 /* -------------------------- MAIN CONTENT -------------------------- */
@@ -112,7 +113,7 @@ main {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
-    background-color: #c46a46; /* terracotta */
+    background-color: #c46a46; /* Terracotta */
     border-radius: 8px;
 }
 
@@ -127,21 +128,22 @@ main {
 .work-experience-text {
     display: flex;
     flex-direction: column;
-    color:#faf9f7;
+    color: #faf9f7;
 }
 
 .work-experience-text h2 {
     margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: "Georgia", serif;
+    text-transform: none; /* Removed all caps */
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* -------------------------- COMPANY LIST -------------------------- */
 .company-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 in a row on desktop */
+    gap: 20px;
+    justify-items: center;
 }
 
 .company-logo-link {
@@ -181,53 +183,53 @@ main {
 /* -------------------------- PROJECTS SECTION -------------------------- */
 .projects-section {
     width: 100%;
-    margin: 40px 0;
-    padding: 20px 0;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #f0e8e2; /* Soft beige background for sectioning */
+    border-radius: 8px;
 }
 
 .projects-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .projects-text-column {
-    flex-basis: 40%;
-    color: #2f2d2b;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .projects-text-column h2 {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: "Georgia", serif;
-    border-left: 3px solid #c46a46; /* terracotta accent */
-    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
     margin-bottom: 10px;
+    color: #2f2d2b;
 }
 
 .projects-text-column p {
     color: #55524f;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .projects-grid-column {
-    flex-basis: 60%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .project-item {
-    display: block;
     position: relative;
     overflow: hidden;
-    height: 250px;
+    border-radius: 8px;
 }
 
 .project-item img {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -241,8 +243,8 @@ main {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
-    background-color: rgba(196, 106, 70, 0.85); /* terracotta overlay */
+    padding: 15px;
+    background-color: rgba(196, 106, 70, 0.85); /* Terracotta overlay */
     color: #faf9f7;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -252,106 +254,102 @@ main {
     opacity: 1;
 }
 
-/* Moss green dot before project titles for subtle accent */
-.project-info h3::before {
-    content: "•";
-    color: #6a7a57; /* moss green */
-    margin-right: 8px;
-}
-
 /* -------------------------- CONTACT INFO -------------------------- */
 .contact-info {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .contact-text {
-    margin-bottom: 20px;
-    color:#2f2d2b;
+    flex: 1;
+    text-align: center;
 }
 
-.contact-container h2 {
-    margin: 0;
-    color:#2f2d2b;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
+/* Container for all icons */
 .contact-list {
     display: flex;
-    gap: 100px;
-    align-items: center;
+    justify-content: center; /* Centers icons horizontally */
+    gap: 30px; /* Space between icons */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
+/* Each clickable link wrapper */
 .contact-logo-link {
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     width: 60px;
     height: 60px;
     border-radius: 50%;
+=======
+    width: 60px; /* Wrapper size */
+>>>>>>> e56802b35060f6cb52c33008ddd16bf31f72de30
 }
 
-.contact-link {
-    width: 100px;
-    height: 100px;
+.contact-logo-link:hover {
+    background-color: #c46a46; /* Terracotta hover */
 }
+
+/* The actual SVG image */
+.contact-link {
+    width: 75px;
+    height: 75px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contact-logo-link {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-link {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
 /* -------------------------- FOOTER -------------------------- */
+/* ---------- FOOTER ---------- */
 footer {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
-    background-color: #2f2d2b;
-    color: #c46a46; /* terracotta accent */
-    font-size: 0.9rem;
+  background-color: #ffffff;
+  color: #55524f;
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-top: 1px solid #eae5e0;
+  margin-top: 80px;
+}
+
+footer a {
+  color: #c46a46;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* -------------------------- RESPONSIVE -------------------------- */
 @media (max-width: 768px) {
-    .navbar {
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .navbar .logo {
-        margin-bottom: 15px;
-    }
-
-    .nav-links {
-        width: 100%;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 10px 15px;
-        border-radius: 0;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .about-me-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-me-photo {
-        margin: 0 auto;
-    }
-
     .work-experience-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .company-list {
-        justify-content: flex-start;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on mobile */
+    }
+
+    .projects-container {
+        padding: 0 10px;
     }
 }
