@@ -6,27 +6,29 @@ html, body {
   font-family: 'Inter', 'Work Sans', sans-serif; /* Modern, clean font */
   color: #1f1f1d;
   background-color: #faf9f7;
+  line-height: 1.7;
 }
 
-/* -------------------------- HEADER/NAV-BAR -------------------------- */
+/* -------------------------- HEADER/NAV-BAR */
 header {
-    background-color: #ffffffee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #eae5e0;
-    backdrop-filter: blur(10px);
+  background-color: #ffffffee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eae5e0;
+  backdrop-filter: blur(10px);
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* -------------------------- LOGO */
 .navbar .logo a {
   color: #2f2d2b;
   text-decoration: none;
@@ -36,12 +38,13 @@ header {
   font-family: 'Montserrat', sans-serif; /* Smooth, modern logo font */
 }
 
+/* -------------------------- NAV LINKS */
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
 }
 
 .nav-links a {
@@ -69,7 +72,7 @@ header {
 
 .nav-links a:hover::after,
 .nav-links a:focus::after {
-    width: 100%;
+  width: 100%;
 }
 
 .nav-links a:hover,
@@ -79,8 +82,8 @@ header {
 
 /* ---------- MAIN SECTION ---------- */
 .category-page-main {
-  max-width: 1100px;
-  margin: 60px auto;
+  max-width: 1000px;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
@@ -109,14 +112,15 @@ header {
 
 /* ---------- SUMMARY SECTIONS ---------- */
 .summary-section {
-  max-width: 800px;
-  margin-bottom: 40px;
+  text-align: left;
+  max-width: 750px;
+  margin: 60px 0;
 }
 
 .summary-section h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #2f2d2b;
   border-left: 3px solid #c46a46; /* Terracotta accent */
   padding-left: 10px;
@@ -125,44 +129,49 @@ header {
 }
 
 .summary-section p {
-  font-family: system-ui, sans-serif;
   color: #55524f;
   font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* ---------- PROJECTS ---------- */
 .project-detail-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 80px;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 100px;
 }
 
 .project-detail-item:nth-of-type(even) {
-  flex-direction: column;
+  flex-direction: row-reverse;
 }
 
 .project-detail-images {
+  flex: 1 1 45%;
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .project-detail-images img {
-  width: 300px;
+  width: 50%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-detail-images img:hover {
+  transform: scale(1.015);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .project-detail-content {
-  max-width: 800px;
-  text-align: left;
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 12px;
 }
 
@@ -174,7 +183,6 @@ header {
 }
 
 .project-detail-content p {
-  font-family: system-ui, sans-serif;
   color: #55524f;
   font-size: 1rem;
 }
@@ -182,31 +190,37 @@ header {
 .project-detail-content ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .project-detail-content li {
-  background-color:#c46a46; /* terracotta accent */
   padding: 6px 10px;
-  border-radius: 6px;
-  color:#faf9f7;
+  margin-bottom: 8px;
+  color: #3b3835;
   font-size: 0.95rem;
+  border-left: 2px solid #c46a46; /* terracotta */
+}
+
+/* subtle moss green dot at the start of each project title (small pop of color) */
+.project-detail-content h2::before {
+  content: "•";
+  color: #6a7a57;
+  margin-right: 8px;
 }
 
 /* ---------- FOOTER ---------- */
 footer {
-  background-color: #2f2d2b;
-  color: #c46a46;
+  background-color: #ffffff;
+  color: #55524f;
   text-align: center;
-  padding: 30px 20px;
+  padding: 50px 20px;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  border-top: 1px solid #eae5e0;
+  margin-top: 80px;
 }
 
 footer a {
-  color: #6a7a57; /* moss green accent */
+  color: #c46a46;
   text-decoration: none;
 }
 
@@ -216,7 +230,8 @@ footer a:hover {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .project-detail-item {
+  .project-detail-item,
+  .project-detail-item:nth-of-type(even) {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -231,7 +246,10 @@ footer a:hover {
   }
 
   .project-detail-content {
-    width: 100%;
-    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .category-page-main {
+    margin: 60px auto;
   }
 }
