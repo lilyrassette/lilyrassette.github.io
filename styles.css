@@ -284,13 +284,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-=======
     width: 60px; /* Wrapper size */
->>>>>>> e56802b35060f6cb52c33008ddd16bf31f72de30
 }
 
 .contact-logo-link:hover {
