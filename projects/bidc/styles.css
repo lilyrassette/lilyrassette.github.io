@@ -9,75 +9,72 @@ html, body {
   line-height: 1.7;
 }
 
-/* -------------------------- HEADER/NAV-BAR */
+/* -------------------------- HEADER/NAV-BAR -------------------------- */
 header {
-  background-color: #ffffffee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #eae5e0;
-  backdrop-filter: blur(10px);
+    background-color: #ffffffee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eae5e0;
+    backdrop-filter: blur(10px);
 }
 
 .navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* -------------------------- LOGO */
 .navbar .logo a {
-  color: #2f2d2b;
-  text-decoration: none;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  font-family: 'Montserrat', sans-serif; /* Smooth, modern logo font */
+    color: #2f2d2b;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif; /* Smooth, modern logo font */
 }
 
-/* -------------------------- NAV LINKS */
 .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
 }
 
 .nav-links a {
-  font-family: 'Work Sans', sans-serif; /* Cohesive modern font */
-  color: #2f2d2b;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  position: relative;
-  transition: color 0.3s ease;
-  text-transform: none; /* Removed all caps */
-  letter-spacing: 0.5px; /* Reduced spacing */
-  font-weight: 500;
+    font-family: 'Work Sans', sans-serif; /* Cohesive modern font */
+    color: #2f2d2b;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+    text-transform: none; /* Removed all caps */
+    letter-spacing: 0.5px; /* Reduced spacing */
+    font-weight: 500;
 }
 
 .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #c46a46; /* Terracotta accent */
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #c46a46; /* Terracotta accent */
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after,
 .nav-links a:focus::after {
-  width: 100%;
+    width: 100%;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: #7a9e9f; /* Muted blue hover for subtle color pop */
+    color: #7a9e9f; /* Muted blue hover for subtle color pop */
 }
 
 /* ---------- MAIN SECTION ---------- */
