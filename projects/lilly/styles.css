@@ -144,7 +144,7 @@ header {
   flex-direction: row-reverse;
 }
 
-..project-detail-images {
+.project-detail-images {
   flex: 1 1 45%;
   display: flex;
   gap: 15px;
