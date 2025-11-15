@@ -144,16 +144,18 @@ header {
   flex-direction: row-reverse;
 }
 
-.project-detail-images {
+..project-detail-images {
   flex: 1 1 45%;
   display: flex;
   gap: 15px;
+  border-radius: 12px;    /* NEW */
+  overflow: hidden;       /* NEW - ensures perfect smooth corners */
 }
 
 .project-detail-images img {
   width: 50%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0;       /* NEW: container handles rounding now */
   object-fit: cover;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
