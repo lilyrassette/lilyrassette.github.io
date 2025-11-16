@@ -180,77 +180,66 @@ main {
     object-fit: cover;
 }
 
-/* -------------------------- PROJECTS SECTION -------------------------- */
-.projects-section {
-    width: 100%;
-    margin: 60px auto;
-    padding: 40px;
-    background-color: #f0e8e2; /* Soft beige background for sectioning */
-    border-radius: 8px;
-}
-
-.projects-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.projects-text-column {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.projects-text-column h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #2f2d2b;
-}
-
-.projects-text-column p {
-    color: #55524f;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
+/* ---------- PROJECTS GRID ---------- */
 .projects-grid-column {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .project-item {
-    border-radius: 12px;
-    overflow: hidden;
+  position: relative;
+  aspect-ratio: 1 / 1; /* forces perfect squares */
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
 }
 
+/* Make all images fill the square */
 .project-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .project-item:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+/* Terracotta overlay */
 .project-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background-color: rgba(196, 106, 70, 0.85); /* Terracotta overlay */
-    color: #faf9f7;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  inset: 0;
+  background: rgba(196, 106, 70, 0.85); /* terracotta w/ transparency */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .project-item:hover .project-info {
-    opacity: 1;
+  opacity: 1;
+}
+
+.project-info h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin: 0;
 }
 
 /* -------------------------- CONTACT INFO -------------------------- */
