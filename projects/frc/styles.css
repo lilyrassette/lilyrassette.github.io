@@ -204,34 +204,38 @@ header {
   margin-right: 8px;
 }
 
-/* Awards section (matches site palette & typography) */
+/* Simplified, more responsive awards section */
 .awards-section {
   max-width: 750px;
-  margin: 40px 0 80px;
+  margin: 32px 0 64px;
 }
 
 .awards-section .awards-intro {
   color: #55524f;
-  font-size: 1.05rem;
-  margin-bottom: 16px;
-  line-height: 1.6;
+  font-size: 1.03rem;
+  margin-bottom: 12px;
+  line-height: 1.55;
 }
 
-/* responsive grid of years */
+/* grid that adapts to narrow screens better */
 .awards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
   align-items: start;
 }
 
-/* card for each year */
+/* compact card for each year */
 .award-year {
   background: #ffffff;
   border: 1px solid #e9e3de;
-  border-radius: 10px;
-  padding: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0; /* allow children to shrink on narrow screens */
 }
 
 /* year badge */
@@ -239,31 +243,35 @@ header {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #ffffff;
-  background-color: #c46a46; /* terracotta accent */
+  background-color: #c46a46;
   padding: 6px 10px;
   border-radius: 999px;
-  margin-bottom: 10px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  white-space: nowrap;
 }
 
-/* awards list */
+/* awards list stacked vertically */
 .award-list {
   list-style: none;
-  padding: 8px 0 0 0;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
+/* each award row: flexible and allowed to wrap */
 .award-list li {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 8px;
-  padding: 6px 0;
+  padding: 4px 0;
   color: #3b3835;
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.35;
+  min-width: 0;
 }
 
 /* moss green dot for each award item */
@@ -272,46 +280,61 @@ header {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #6a7a57; /* moss green accent */
-  margin-right: 12px;
+  background-color: #6a7a57;
+  margin-top: 6px; /* aligns dot with multi-line text */
   flex: 0 0 auto;
 }
 
-/* title and sponsor styling */
+/* title and sponsor styling — allow wrapping */
 .award-title {
   font-weight: 600;
   color: #2f2d2b;
   font-family: 'Work Sans', sans-serif;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .award-sponsor {
   font-size: 0.85rem;
-  color: #7a9e9f; /* muted blue accent */
+  color: #7a9e9f;
   margin-left: 12px;
   font-weight: 500;
-  white-space: nowrap;
+  white-space: normal; /* allow sponsor to wrap */
+  flex: 0 0 auto;
 }
 
-/* small screens: single column, tighter spacing */
+/* small screens: make award rows stack so text never overflows */
 @media (max-width: 600px) {
   .awards-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .award-year {
-    padding: 12px;
+    padding: 10px;
+    border-radius: 8px;
   }
 
-  .award-year .year {
-    font-size: 0.95rem;
-    padding: 5px 8px;
+  .award-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .award-list li::before {
-    width: 7px;
-    height: 7px;
-    margin-right: 10px;
+    margin-top: 6px;
+  }
+
+  .award-sponsor {
+    margin-left: 0;
+    margin-top: 2px;
+  }
+
+  .award-year .year {
+    font-size: 0.9rem;
+    padding: 5px 8px;
   }
 }
 
