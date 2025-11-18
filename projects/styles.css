@@ -127,38 +127,6 @@ main {
     justify-content: flex-start; /* keep text left aligned */
 }
 
-.project-category:not(:has(.category-images)) .category-details {
-    flex-basis: 100%;
-    max-width: 100%;
-    /* normalize text size so it matches the rest of the site */
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.project-category:not(:has(.category-images)) .category-details p,
-.project-category:not(:has(.category-images)) .category-details ul li {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Fallback if :has() isn't available — add .no-images to .project-category in HTML/JS */
-.project-category.no-images {
-    justify-content: flex-start;
-}
-
-.project-category.no-images .category-details {
-    flex-basis: 100%;
-    max-width: 100%;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.project-category.no-images .category-details p,
-.project-category.no-images .category-details ul li {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
 /* -------------------------- CATEGORY DETAILS */
 .category-details {
     flex-basis: 45%;
