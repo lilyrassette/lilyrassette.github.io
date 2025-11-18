@@ -113,7 +113,7 @@ main {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
-    background-color: #c46a46; /* Terracotta */
+    background-color: #6a7a57; /* Terracotta */
     border-radius: 8px;
 }
 
@@ -247,7 +247,7 @@ main {
 .project-info {
   position: absolute;
   inset: 0;
-  background: #6a7a57; /* terracotta overlay */
+  background: rgba(196, 106, 70, 0.88); /* terracotta overlay */
   color: white;
   opacity: 0;
   display: flex;
