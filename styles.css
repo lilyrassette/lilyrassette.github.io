@@ -247,7 +247,7 @@ main {
 .project-info {
   position: absolute;
   inset: 0;
-  background: rgba(196, 106, 70, 0.88); /* terracotta overlay */
+  background: #6a7a57; /* terracotta overlay */
   color: white;
   opacity: 0;
   display: flex;
