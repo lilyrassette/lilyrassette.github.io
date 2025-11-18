@@ -122,6 +122,10 @@ main {
     border-radius: 8px 0 0 8px;
 }
 
+.project-category:not(:has(.category-images)) {
+    justify-content: center; /* centers content */
+}
+
 /* -------------------------- CATEGORY DETAILS */
 .category-details {
     flex-basis: 45%;
