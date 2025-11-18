@@ -122,8 +122,24 @@ main {
     border-radius: 8px 0 0 8px;
 }
 
+/* when no images present — make details take full width */
 .project-category:not(:has(.category-images)) {
-    justify-content: center; /* centers content */
+    justify-content: flex-start; /* keep text left aligned */
+}
+
+.project-category:not(:has(.category-images)) .category-details {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+/* Fallback if :has() isn't available — add .no-images to .project-category in HTML/JS */
+.project-category.no-images {
+    justify-content: flex-start;
+}
+
+.project-category.no-images .category-details {
+    flex-basis: 100%;
+    max-width: 100%;
 }
 
 /* -------------------------- CATEGORY DETAILS */
