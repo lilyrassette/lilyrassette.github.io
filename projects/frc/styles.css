@@ -204,10 +204,11 @@ header {
   margin-right: 8px;
 }
 
-/* Simplified, more responsive awards section */
+/* Simplified stacked awards (vertical list, centered, not full-page width) */
 .awards-section {
-  max-width: 750px;
-  margin: 32px 0 64px;
+  max-width: 420px;
+  margin: 32px auto 64px;
+  width: 100%;
 }
 
 .awards-section .awards-intro {
@@ -217,25 +218,24 @@ header {
   line-height: 1.55;
 }
 
-/* grid that adapts to narrow screens better */
+/* stack items vertically instead of a grid */
 .awards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  align-items: start;
+  width: 100%;
 }
 
-/* compact card for each year */
+/* compact card for each year - constrained to the container width */
 .award-year {
   background: #ffffff;
   border: 1px solid #e9e3de;
   border-radius: 8px;
   padding: 12px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 0; /* allow children to shrink on narrow screens */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* year badge */
@@ -255,81 +255,59 @@ header {
 /* awards list stacked vertically */
 .award-list {
   list-style: none;
-  padding: 0;
+  padding: 8px 0 0 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: block;
 }
 
-/* each award row: flexible and allowed to wrap */
+/* each award row simplified to block so text wraps naturally */
 .award-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 4px 0;
+  display: block;
+  padding: 6px 0;
   color: #3b3835;
   font-size: 0.95rem;
   line-height: 1.35;
-  min-width: 0;
 }
 
-/* moss green dot for each award item */
+/* moss green dot for each award item (inline with text) */
 .award-list li::before {
   content: "";
+  display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: #6a7a57;
-  margin-top: 6px; /* aligns dot with multi-line text */
-  flex: 0 0 auto;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 /* title and sponsor styling — allow wrapping */
 .award-title {
+  display: inline;
   font-weight: 600;
   color: #2f2d2b;
   font-family: 'Work Sans', sans-serif;
   overflow-wrap: anywhere;
   word-break: break-word;
-  flex: 1 1 auto;
-  min-width: 0;
 }
 
 .award-sponsor {
+  display: block;
   font-size: 0.85rem;
   color: #7a9e9f;
-  margin-left: 12px;
+  margin-top: 2px;
   font-weight: 500;
-  white-space: normal; /* allow sponsor to wrap */
-  flex: 0 0 auto;
 }
 
-/* small screens: make award rows stack so text never overflows */
+/* small screens keep the same stacked layout */
 @media (max-width: 600px) {
-  .awards-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+  .awards-section {
+    max-width: 100%;
+    padding: 0 16px;
   }
 
   .award-year {
     padding: 10px;
-    border-radius: 8px;
-  }
-
-  .award-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .award-list li::before {
-    margin-top: 6px;
-  }
-
-  .award-sponsor {
-    margin-left: 0;
-    margin-top: 2px;
   }
 
   .award-year .year {
