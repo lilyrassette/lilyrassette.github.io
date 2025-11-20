@@ -91,17 +91,19 @@ main {
 
 /* -------------------------- PROJECT CATEGORY */
 .project-category {
+    position: relative; /* needed for the accent strip (::before) */
     text-decoration: none;
     color: #2f2d2b;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    padding: 30px;
+    padding: 30px 30px 30px 36px; /* make room for the left accent */
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eae5e0; /* Subtle border */
     background-color: #ffffff; /* Neutral background */
+    overflow: hidden; /* prevents overflowing images from showing outside rounded corners */
 }
 
 .project-category:hover {
@@ -129,7 +131,8 @@ main {
 
 /* -------------------------- CATEGORY DETAILS */
 .category-details {
-    flex-basis: 45%;
+    flex: 1 1 45%;
+    min-width: 220px;
 }
 
 .category-details h2 {
@@ -153,17 +156,62 @@ main {
 }
 
 /* -------------------------- CATEGORY IMAGES */
+/* flexible grid: 1–3 images automatically share available space */
 .category-images {
     display: flex;
-    flex-basis: 50%;
+    flex: 1 1 50%;
     gap: 10px;
+    align-items: stretch;
+    min-width: 140px;
 }
 
+/* base image styling: center-cropped, responsive, consistent heights */
 .category-images img {
-    flex-grow: 1;
-    height: 150px;
-    object-fit: cover;
+    flex: 1 1 0;
+    min-width: 0; /* allow flex children to shrink properly */
+    width: 100%;
+    height: 180px; /* default height for multi-image rows */
+    object-fit: cover; /* center-crop the image so it looks good at different fills */
+    object-position: center center; /* focus on center of image */
     border-radius: 8px;
+    display: block;
+}
+
+/* if exactly two images, make them a bit taller for better balance */
+.category-images:has(img:nth-child(2):last-child) img {
+    height: 200px;
+}
+
+/* if exactly one image, make it larger and maintain a landscape crop */
+.category-images:has(img:only-child) img {
+    height: 260px;
+    object-position: center center;
+    border-radius: 8px;
+}
+
+/* small screens: stack images under details and reduce heights */
+@media (max-width: 768px) {
+    .project-category {
+        flex-direction: column;
+        padding-left: 30px; /* reduce left padding on stacked layout */
+    }
+
+    .category-details {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .category-images {
+        width: 100%;
+    }
+
+    .category-images img {
+        height: 160px;
+    }
+
+    .category-images:has(img:only-child) img {
+        height: 200px;
+    }
 }
 
 /* -------------------------- FOOTER */
