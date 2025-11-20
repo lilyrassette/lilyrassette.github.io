@@ -147,19 +147,31 @@ header {
   flex-direction: row-reverse;
 }
 
+/* Make images share the available space equally (regardless of count),
+   allow wrapping and preserve the full image (no cropping). */
 .project-detail-images {
   flex: 1 1 45%;
   display: flex;
   gap: 15px;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .project-detail-images img {
-  width: 50%;
-  height: auto;
+  flex: 1 1 0;        /* each image takes an equal share of the row */
+  width: 100%;
+  max-width: 100%;
+  height: auto;       /* preserve aspect ratio, don't crop */
+  object-fit: contain;/* ensure the whole image is shown */
   border-radius: 8px;
-  object-fit: cover;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* If there's only one image it will naturally span the whole image area,
+   but you can make that explicit if preferred: */
+.project-detail-images img:only-child {
+  flex-basis: 100%;
 }
 
 .project-detail-images img:hover {
