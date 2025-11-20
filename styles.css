@@ -113,7 +113,7 @@ main {
     width: 100%;
     margin: 40px auto;
     padding: 30px;
-    background-color: #6a7a57; /* Terracotta */
+    background-color: #f0e8e2; /* Terracotta */
     border-radius: 8px;
 }
 
@@ -128,7 +128,7 @@ main {
 .work-experience-text {
     display: flex;
     flex-direction: column;
-    color: #faf9f7;
+    color: #2f2d2b;
 }
 
 .work-experience-text h2 {

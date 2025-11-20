@@ -122,6 +122,11 @@ main {
     border-radius: 8px 0 0 8px;
 }
 
+/* when no images present — make details take full width */
+.project-category:not(:has(.category-images)) {
+    justify-content: flex-start; /* keep text left aligned */
+}
+
 /* -------------------------- CATEGORY DETAILS */
 .category-details {
     flex-basis: 45%;

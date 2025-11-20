@@ -110,6 +110,7 @@ main {
 }
 
 /* -------------------------- CV SECTIONS -------------------------- */
+/* Make the text area flexible so buttons can keep a stable width */
 .lilly-section, .bidc-section, .psr-section, .frc-section {
     display: flex;
     align-items: center;
@@ -123,6 +124,12 @@ main {
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     color: #2f2d2b;
     transition: transform 0.3s ease;
+}
+
+/* Ensure the main text block can shrink properly in flex layout */
+.cv-text {
+    flex: 1 1 auto;
+    min-width: 0; /* allow proper text truncation/shrinking inside flex containers */
 }
 
 .lilly-section:hover,
@@ -156,17 +163,23 @@ main {
 }
 
 /* -------------------------- BUTTON -------------------------- */
+/* Give the button a stable minimum width and prevent its label wrapping.
+   Also make it resist shrinking inside flex rows. */
 .learn-more-button {
     text-decoration: none;
     color: #ffffff;
     background-color: #c46a46; /* Terracotta button */
-    padding: 10px 20px;
+    padding: 12px 22px; /* slightly larger padding for clarity */
     border-radius: 5px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
     transition: background-color 0.3s ease;
+
+    white-space: nowrap; /* prevent text inside button from wrapping */
+    min-width: 160px;    /* keeps button wide enough for label */
+    flex: 0 0 auto;      /* don't shrink in a flex row */
 }
 
 .learn-more-button:hover {
@@ -232,5 +245,13 @@ footer a:hover {
     .CV-photo {
         width: 150px;
         height: 150px;
+    }
+
+    /* On small screens let the button stretch and allow wrapping if needed */
+    .learn-more-button {
+        width: 100%;
+        min-width: 0;
+        white-space: normal;
+        justify-content: center;
     }
 }
