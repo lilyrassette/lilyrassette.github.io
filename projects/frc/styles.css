@@ -204,13 +204,14 @@ header {
   margin-right: 8px;
 }
 
-/* Simplified Awards (matches page style, full content width) */
+/* Simplified Awards — plain terracotta year, minimal styling */
+/* Ensure your HTML lists years in descending order (2024 first, 2022 last) */
+
 .awards {
   width: 100%;
   margin: 40px 0 64px;
 }
 
-/* Section title follows summary-section style */
 .awards > h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
@@ -221,28 +222,28 @@ header {
   letter-spacing: 0.5px;
 }
 
-/* Each year row: compact, full width */
+/* Each year row: compact, clean, year on the left as plain terracotta text */
 .awards .award-item {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   align-items: flex-start;
   padding: 12px 0;
-  border-bottom: 1px solid #e9e3de;
+  /* intentionally no heavy borders or badges for a cleaner look */
 }
 
-/* Year badge (left) */
+/* Year label: plain terracotta text, larger and aligned with list */
 .awards .award-item h3 {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 0.95rem;
-  color: #ffffff;
-  background-color: #c46a46;
-  padding: 6px 10px;
-  border-radius: 999px;
+  font-size: 1.25rem;
+  color: #c46a46; /* terracotta text */
+  background: none;
+  padding: 0;
+  border-radius: 0;
   flex: 0 0 auto;
-  min-width: 54px;
-  text-align: center;
+  min-width: 56px; /* keeps vertical alignment, but no encasing */
+  text-align: left;
 }
 
 /* Awards list (right) */
@@ -279,9 +280,19 @@ header {
   background-color: #6a7a57;
 }
 
-/* Remove bottom border on last item for a cleaner end */
-.awards .award-item:last-child {
-  border-bottom: none;
+/* Small screens: stack year above list to avoid overflow */
+@media (max-width: 600px) {
+  .awards .award-item {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .awards .award-item h3 {
+    min-width: 0;
+    padding: 0;
+    font-size: 1.05rem;
+  }
 }
 
 /* Small screens: stack year above list to avoid overflow */
