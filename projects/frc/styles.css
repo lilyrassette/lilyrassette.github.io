@@ -204,9 +204,7 @@ header {
   margin-right: 8px;
 }
 
-/* Simplified Awards — plain terracotta year, minimal styling */
-/* Ensure your HTML lists years in descending order (2024 first, 2022 last) */
-
+/* Awards section - clean and cohesive */
 .awards {
   width: 100%;
   margin: 40px 0 64px;
@@ -215,16 +213,48 @@ header {
 .awards > h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  margin: 0 0 16px;
+  margin: 0 0 24px;
   color: #2f2d2b;
   border-left: 3px solid #c46a46;
   padding-left: 10px;
   letter-spacing: 0.5px;
 }
 
-/* Each year row: compact, clean, year on the left as plain terracotta text */
 .awards .award-item {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.awards .award-item h3 {
+  margin: 0 0 8px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #c46a46;
+  padding: 0;
+}
+
+.awards .award-item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.awards .award-item ul li {
+  padding: 6px 0 6px 16px;
+  color: #55524f;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.awards .award-item ul li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: #6a7a57;
+}
   gap: 20px;
   align-items: flex-start;
   padding: 12px 0;
