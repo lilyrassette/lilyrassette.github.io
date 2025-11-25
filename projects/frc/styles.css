@@ -255,11 +255,6 @@ header {
   left: 4px;
   color: #6a7a57;
 }
-  gap: 20px;
-  align-items: flex-start;
-  padding: 12px 0;
-  /* intentionally no heavy borders or badges for a cleaner look */
-}
 
 /* Year label: plain terracotta text, larger and aligned with list */
 .awards .award-item h3 {
