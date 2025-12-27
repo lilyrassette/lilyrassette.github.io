@@ -293,17 +293,6 @@ header {
   font-size: 0.95rem;
 }
 
-/* Dot */
-.awards .award-item ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #6a7a57;
-}
 
 /* Small screens: stack year above list to avoid overflow */
 @media (max-width: 600px) {
