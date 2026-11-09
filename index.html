@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,14 +9,13 @@
 
     <link href="styles.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
     <nav class="navbar">
-
         <div class="logo">
             <a href="/">LR<span>.</span></a>
         </div>
@@ -27,18 +25,14 @@
             <li><a href="/projects/">Projects</a></li>
             <li><a href="/experience/">Experience</a></li>
         </ul>
-
     </nav>
 </header>
-
 
 <main>
 
     <!-- HERO -->
     <section class="hero">
-
         <div class="hero-text">
-
             <p class="eyebrow">ELECTRICAL ENGINEERING · PURDUE UNIVERSITY</p>
 
             <h1>
@@ -57,51 +51,39 @@
                 <a href="/experience/" class="button button-primary">
                     See my experience
                 </a>
-
                 <a href="/projects/" class="button button-secondary">
                     Explore my projects →
                 </a>
             </div>
-
         </div>
 
         <div class="hero-image">
-
             <div class="image-frame">
                 <img src="websitephoto.png" alt="Lily Rassette">
             </div>
-
             <div class="hero-note">
                 <span>Currently</span>
                 <strong>Purdue EE · Class of 2028</strong>
             </div>
-
         </div>
-
     </section>
-
 
     <!-- QUICK INTERESTS -->
     <section class="interest-bar">
-
         <div>⚡ Electronics</div>
         <div>◈ Prototyping</div>
         <div>⌁ Automation</div>
         <div>✦ Fabrication</div>
-
     </section>
-
 
     <!-- ABOUT -->
     <section class="about-section">
-
         <div class="section-label">
             <span>01</span>
             ABOUT ME
         </div>
 
         <div class="about-content">
-
             <div class="about-heading">
                 <h2>
                     Curious by nature.<br>
@@ -110,393 +92,230 @@
             </div>
 
             <div class="about-copy">
-
                 <p>
                     I'm an electrical engineering undergraduate at
                     Purdue University who loves taking an idea from
                     <strong>"what if?"</strong> to something I can
                     actually hold, test, and improve.
                 </p>
-
                 <p>
                     My experience spans PCB design and assembly,
                     embedded systems, automation, rapid prototyping,
                     mechanical design, additive manufacturing, and
                     engineering fabrication.
                 </p>
-
                 <p>
                     When I'm not in the lab, you'll probably find me
                     playing guitar, hiking, rock climbing, or exploring
                     local music.
                 </p>
-
             </div>
-
         </div>
-
     </section>
-
 
     <!-- EXPERIENCE -->
     <section class="experience-section">
-
         <div class="section-heading">
-
             <div>
                 <div class="section-label">
                     <span>02</span>
                     EXPERIENCE
                 </div>
-
                 <h2>Places I've <em>built things.</em></h2>
             </div>
-
             <p>
                 A few of the teams, companies, and organizations
                 that have shaped how I engineer.
             </p>
-
         </div>
 
-
         <div class="experience-grid">
-
             <!-- LILLY -->
-            <a href="projects/lilly/" class="experience-card featured">
-
-                <div class="experience-number">01</div>
-
-                <img
-                    src="logos/lilly_logo.png"
-                    alt="Eli Lilly and Company"
-                >
-
-                <div class="experience-info">
-                    <span>ADVANCED THERAPIES · 2025</span>
-                    <h3>Eli Lilly & Company</h3>
-                    <p>
-                        Automation, process engineering, controls,
-                        data infrastructure, and hardware for
-                        pharmaceutical manufacturing.
-                    </p>
+            <a href="projects/lilly/" class="experience-card">
+                <div class="experience-meta">
+                    <span class="experience-number">01</span>
+                    <span class="experience-tag">ADVANCED THERAPIES · 2025</span>
                 </div>
-
+                <div class="experience-body">
+                    <img src="logos/lilly_logo.png" alt="Eli Lilly and Company">
+                    <div>
+                        <h3>Eli Lilly & Company</h3>
+                        <p>Automation, process engineering, controls, data infrastructure, and hardware for pharmaceutical manufacturing.</p>
+                    </div>
+                </div>
                 <span class="card-arrow">↗</span>
-
             </a>
-
 
             <!-- RTX -->
-            <a href="/experience/" class="experience-card featured">
-
-                <div class="experience-number">02</div>
-
-                <img
-                    src="logos/rtx_logo.png"
-                    alt="RTX"
-                >
-
-                <div class="experience-info">
-                    <span>RAPID PROTOTYPING · 2026</span>
-                    <h3>RTX / Raytheon</h3>
-                    <p>
-                        Engineering prototyping and fabrication,
-                        additive manufacturing, electronics,
-                        and rapid hardware development.
-                    </p>
+            <a href="/experience/" class="experience-card">
+                <div class="experience-meta">
+                    <span class="experience-number">02</span>
+                    <span class="experience-tag">RAPID PROTOTYPING · 2026</span>
                 </div>
-
+                <div class="experience-body">
+                    <img src="logos/rtx_logo.png" alt="RTX">
+                    <div>
+                        <h3>RTX / Raytheon</h3>
+                        <p>Engineering prototyping and fabrication, additive manufacturing, electronics, and rapid hardware development.</p>
+                    </div>
+                </div>
                 <span class="card-arrow">↗</span>
-
             </a>
-
 
             <!-- BIDC -->
             <a href="projects/bidc/" class="experience-card">
-
-                <div class="experience-number">03</div>
-
-                <img
-                    src="logos/bidc_logo.png"
-                    alt="Bechtel Innovation Design Center"
-                >
-
-                <div class="experience-info">
-                    <span>MAKERSPACE · 2024—PRESENT</span>
-                    <h3>Bechtel Innovation Design Center</h3>
-                    <p>
-                        Printing, fabrication, prototyping, and
-                        student leadership.
-                    </p>
+                <div class="experience-meta">
+                    <span class="experience-number">03</span>
+                    <span class="experience-tag">MAKERSPACE · 2024—PRESENT</span>
                 </div>
-
+                <div class="experience-body">
+                    <img src="logos/bidc_logo.png" alt="Bechtel Innovation Design Center">
+                    <div>
+                        <h3>Bechtel Innovation Design Center</h3>
+                        <p>Printing, fabrication, prototyping, and student leadership.</p>
+                    </div>
+                </div>
                 <span class="card-arrow">↗</span>
-
             </a>
-
 
             <!-- SOLAR RACING -->
             <a href="projects/solarcar/" class="experience-card">
-
-                <div class="experience-number">04</div>
-
-                <img
-                    src="logos/psrlogo.png"
-                    alt="Purdue Solar Racing"
-                >
-
-                <div class="experience-info">
-                    <span>STUDENT ENGINEERING TEAM</span>
-                    <h3>Purdue Solar Racing</h3>
-                    <p>
-                        Electrical systems, PCBs, battery systems,
-                        and hands-on vehicle development.
-                    </p>
+                <div class="experience-meta">
+                    <span class="experience-number">04</span>
+                    <span class="experience-tag">STUDENT ENGINEERING TEAM</span>
                 </div>
-
+                <div class="experience-body">
+                    <img src="logos/psrlogo.png" alt="Purdue Solar Racing">
+                    <div>
+                        <h3>Purdue Solar Racing</h3>
+                        <p>Electrical systems, PCBs, battery systems, and hands-on vehicle development.</p>
+                    </div>
+                </div>
                 <span class="card-arrow">↗</span>
-
             </a>
-
         </div>
-
     </section>
-
 
     <!-- VISUAL BREAK -->
     <section class="photo-bar">
-
-        <img
-            src="projects/solarcar/solarcar_pictures/vivandmecar.JPEG"
-            alt="Working on Purdue Solar Racing"
-        >
-
-        <img
-            src="projects/misc/woodwork/woodwork2.JPEG"
-            alt="Woodworking project"
-        >
-
-        <img
-            src="projects/solarcar/solarcar_pictures/carsunglasses.png"
-            alt="Purdue Solar Racing car"
-        >
-
-        <img
-            src="projects/misc/rocketry/rocketwork3.jpeg"
-            alt="Rocketry project"
-        >
-
+        <img src="projects/solarcar/solarcar_pictures/vivandmecar.JPEG" alt="Working on Purdue Solar Racing">
+        <img src="projects/misc/woodwork/woodwork2.JPEG" alt="Woodworking project">
+        <img src="projects/solarcar/solarcar_pictures/carsunglasses.png" alt="Purdue Solar Racing car">
+        <img src="projects/misc/rocketry/rocketwork3.jpeg" alt="Rocketry project">
     </section>
-
 
     <!-- PROJECTS -->
     <section class="projects-section">
-
         <div class="section-heading project-heading">
-
             <div>
                 <div class="section-label">
                     <span>03</span>
                     SELECTED PROJECTS
                 </div>
-
                 <h2>Things I've <em>made.</em></h2>
             </div>
-
-            <a href="/projects/" class="text-link">
-                View all projects →
-            </a>
-
+            <a href="/projects/" class="text-link">View all projects →</a>
         </div>
 
-
         <div class="projects-grid">
-
             <a href="projects/solarcar/" class="project-card project-large">
-
-                <img
-                    src="projects/solarcar/solarcar_pictures/psr_startup1.png"
-                    alt="Purdue Solar Racing PCB"
-                >
-
+                <img src="projects/solarcar/solarcar_pictures/psr_startup1.png" alt="Purdue Solar Racing PCB">
                 <div class="project-overlay">
                     <span>PCB DESIGN</span>
                     <h3>Purdue Solar Racing</h3>
                     <p>Custom startup PCB, designed and fabricated.</p>
                 </div>
-
             </a>
 
-
             <a href="projects/frc/" class="project-card">
-
-                <img
-                    src="projects/frc/frc_photos/fullrobot_comp1.JPG"
-                    alt="FIRST Robotics Competition robot"
-                >
-
+                <img src="projects/frc/frc_photos/fullrobot_comp1.JPG" alt="FIRST Robotics Competition robot">
                 <div class="project-overlay">
                     <span>ROBOTICS</span>
                     <h3>FIRST Robotics</h3>
                     <p>2024 competition robot.</p>
                 </div>
-
             </a>
 
-
             <a href="projects/misc/" class="project-card">
-
-                <img
-                    src="projects/misc/soccer ball/ball_completed1.JPEG"
-                    alt="Hand-sewn soccer ball"
-                >
-
+                <img src="projects/misc/soccer ball/ball_completed1.JPEG" alt="Hand-sewn soccer ball">
                 <div class="project-overlay">
                     <span>FOR FUN</span>
                     <h3>Hand-Sewn Soccer Ball</h3>
                     <p>Designed and fabricated from scratch.</p>
                 </div>
-
             </a>
 
-
             <a href="projects/school/" class="project-card">
-
-                <img
-                    src="projects/school/school_pics/555timerwork.JPEG"
-                    alt="555 timer circuit"
-                >
-
+                <img src="projects/school/school_pics/555timerwork.JPEG" alt="555 timer circuit">
                 <div class="project-overlay">
                     <span>ECE · PURDUE</span>
                     <h3>Stepped Tone Generator</h3>
                     <p>A 555 timer project.</p>
                 </div>
-
             </a>
 
-
             <a href="projects/bidc/" class="project-card">
-
-                <img
-                    src="projects/solarcar/solarcar_pictures/battery_pack.png"
-                    alt="Lithium ion battery pack"
-                >
-
+                <img src="projects/solarcar/solarcar_pictures/battery_pack.png" alt="Lithium ion battery pack">
                 <div class="project-overlay">
                     <span>HARDWARE</span>
                     <h3>Li-Ion Battery Pack</h3>
                     <p>Designed and assembled with the team.</p>
                 </div>
-
             </a>
 
-
             <a href="projects/bidc/" class="project-card">
-
-                <img
-                    src="projects/bidc/bidc_photos/ringqual.jpg"
-                    alt="Lost wax cast ring"
-                >
-
+                <img src="projects/bidc/bidc_photos/ringqual.jpg" alt="Lost wax cast ring">
                 <div class="project-overlay">
                     <span>FABRICATION</span>
                     <h3>Lost Wax Casting</h3>
                     <p>3D printed, designed, and cast.</p>
                 </div>
-
             </a>
-
         </div>
-
     </section>
-
 
     <!-- PERSONAL PHOTO STRIP -->
     <section class="photo-bar photo-bar-bottom">
-
-        <img
-            src="projects/solarcar/solarcar_pictures/car_picture1.png"
-            alt="Solar car"
-        >
-
-        <img
-            src="projects/misc/misc_pics/grandprix.JPEG"
-            alt="Purdue Grand Prix"
-        >
-
-        <img
-            src="projects/misc/misc_pics/vette1.JPG"
-            alt="Car"
-        >
-
-        <img
-            src="projects/solarcar/solarcar_pictures/psr_battery_work1.png"
-            alt="Battery work"
-        >
-
+        <img src="projects/solarcar/solarcar_pictures/car_picture1.png" alt="Solar car">
+        <img src="projects/misc/misc_pics/grandprix.JPEG" alt="Purdue Grand Prix">
+        <img src="projects/misc/misc_pics/vette1.JPG" alt="Car">
+        <img src="projects/solarcar/solarcar_pictures/psr_battery_work1.png" alt="Battery work">
     </section>
-
 
     <!-- CONTACT -->
     <section class="contact-section">
-
         <div class="section-label">
             <span>04</span>
             SAY HELLO
         </div>
 
         <div class="contact-content">
-
             <h2>
                 Have a project,<br>
                 opportunity, or <em>idea?</em>
             </h2>
-
             <p>
                 I'm always happy to talk engineering, projects,
                 music, or anything interesting you're building.
             </p>
 
             <div class="contact-links">
-
-                <a href="mailto:lilyrassette@outlook.com?subject=Inquiry from your website">
-                    Email me ↗
-                </a>
-
-                <a href="https://www.linkedin.com/in/lily-rassette">
-                    LinkedIn ↗
-                </a>
-
-                <a href="https://github.com/lilyrassette/lilyrassette.github.io">
-                    GitHub ↗
-                </a>
-
+                <a href="mailto:lilyrassette@outlook.com?subject=Inquiry from your website">Email me ↗</a>
+                <a href="https://www.linkedin.com/in/lily-rassette">LinkedIn ↗</a>
+                <a href="https://github.com/lilyrassette/lilyrassette.github.io">GitHub ↗</a>
             </div>
-
         </div>
-
     </section>
 
 </main>
 
-
 <footer>
-
-    <div>
-        © 2026 Lily Rassette
-    </div>
-
+    <div>© 2026 Lily Rassette</div>
     <div>
         Built from scratch with HTML & CSS ·
-        <a href="https://github.com/lilyrassette/lilyrassette.github.io">
-            View source
-        </a>
+        <a href="https://github.com/lilyrassette/lilyrassette.github.io">View source</a>
     </div>
-
 </footer>
 
 </body>
 </html>
-```
